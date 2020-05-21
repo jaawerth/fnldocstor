@@ -1,0 +1,2 @@
+# Force Github to highlight Fennel src as Clojure
+*.fnl linguist-language=clojure
