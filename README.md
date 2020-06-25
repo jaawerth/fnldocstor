@@ -43,8 +43,8 @@ functions. It will recur through both, setting metadata on matching field paths.
 
 ```clojure
 (local greet #(print (.. "Hi, " $ "!")))
-(docstor.load-docset greet {:meta {:docstor/docstring "Says hi"
-                                   :docstor/arglist ["name"]}})
+(docstor.load-docset greet {:meta {:fnl/docstring "Says hi"
+                                   :fnl/arglist ["name"]}})
 
 (local library {:foo (fn [] (do something))
                 :bar (fn [] (do something-else))
@@ -53,13 +53,13 @@ functions. It will recur through both, setting metadata on matching field paths.
 (docstor.load-docset library library-docset)
 ```
 
-The docset should be in the following format - for full examples, see the
+The docset should be in the following format; for full examples, see the
 [data/](data) directory.
 
 ```clojure
-{:fields {field1 {:meta {:docstor/arglist  [...]   ; table<string>: table of argnames
-                         :docstor/docstring docstr ; string:        the docstring
-                         :docstor/link      link   ; ?string:       optional url to fn docs}
+{:fields {field1 {:meta {:fnl/arglist   [...]  ; table<string>: table of argnames
+                         :fnl/docstring docstr ; string:        the docstring
+                         :docstor/link  link   ; ?string:       optional url to fn docs}
                   :fields <recursive}
           field2 {:meta   {...}
                   :fields <recursive>}}}

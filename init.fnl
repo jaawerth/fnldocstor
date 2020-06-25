@@ -40,8 +40,8 @@
 (fn load-docset [tgt docset]
   "Loads arbitrary docsets for tgt table recursively into fennel.metadata
 for all matching fields. The docset should be of the form:
-{:fields {field1 {:meta {:docstor/arglist  [<string:args> ...]
-                         :docstor/docstring <string>
+{:fields {field1 {:meta {:fnl/arglist  [<string:args> ...]
+                         :fnl/docstring <string>
                          :docstor/link      <string:optional url field docs>}
                   :fields <recursive}
           field2 {:meta   {...}
