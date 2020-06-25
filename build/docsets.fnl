@@ -1,5 +1,5 @@
 #!/usr/bin/env fennel
-(import-macros {: over-values} :fnldocstor.macros)
+(import-macros {: over-values : get-data-dir} :fnldocstor.macros)
 (local {: concat : line-break} (require :fnldocstor.utils))
 (local (fennel view request json)
        (over-values require :fennel :fennelview :http.request :dkjson))
@@ -36,7 +36,9 @@ If src is not a table, src itself will be inserted into the new table."
     (when (not= :200 (headers:get ::status)) (error body))
     (values body headers)))
 
-(local paths {:processed #(.. :docstor/data/ $ :.fnl)
+(local paths {:processed #(-> (get-data-dir)
+                              (: :gsub "^fnldocstor%." "") (: :gsub "%." "/")
+                              (.. "/" $ :.fnl))
               :raw       #(.. :build/ $ :.fnl)})
 (fn fetch-docset [key]
   (assert (= :string (type (. docsets key)))
