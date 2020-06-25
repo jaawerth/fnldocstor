@@ -8,14 +8,17 @@
 (macro gen-requires [version]
   (import-macros {: get-data-dir} :fnldocstor.macros)
   (local data (string.gsub (get-data-dir) "/+$" ""))
+  (local req #`(let [docset# (require ,$)]
+                  (tset package.loaded ,$ nil)
+                  docset#))
   `(let [version# ,version]
      (match version#
-       :lua_5_1 (require ,(.. data :.lua_5_1))
-       :lua_5_2 (require ,(.. data :.lua_5_2))
-       :lua_5_3 (require ,(.. data :.lua_5_3))
-       :luajit  (require ,(.. data :.luajit))
+       :lua_5_1 ,(req (.. data :.lua_5_1))
+       :lua_5_2 ,(req (.. data :.lua_5_2))
+       :lua_5_3 ,(req (.. data :.lua_5_3))
+       :luajit  ,(req (.. data :.luajit))
        (->> (format "Unable to load docsets for _VERSION %s\n" version#)
-            (pcall io.write io.stderr)))))
+            (pcall io.stderr.write io.stderr)))))
 
 ; used to track how many items we've set metadata on
 (fn counter []
