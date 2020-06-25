@@ -1,10 +1,10 @@
 #!/usr/bin/env fennel
-(require-macros :docstor.macros)
+(import-macros {: over-values} :fnldocstor.macros)
+(local {: concat : line-break} (require :fnldocstor.utils))
 (local (fennel view request json)
-       (on-vals require :fennel :fennelview :http.request :dkjson))
-(local {: concat : line-break} (require :docstor.utils))
+       (over-values require :fennel :fennelview :http.request :dkjson))
 
-(local unpack (or unpack table.unpack))
+(local *unpack (or unpack table.unpack))
 (local docsets
        {:love "https://raw.githubusercontent.com/rm-code/love-atom/master/data/love-completions.json"
         :lua_5_1 "https://raw.githubusercontent.com/dapetcu21/atom-autocomplete-lua/master/lib/stdlib/5_1.json"
@@ -12,28 +12,42 @@
         :lua_5_3 "https://raw.githubusercontent.com/dapetcu21/atom-autocomplete-lua/master/lib/stdlib/5_3.json"
         :luajit "https://raw.githubusercontent.com/dapetcu21/atom-autocomplete-lua/master/lib/stdlib/luajit-2_0.json"})
 
+;; util functions
+(fn concat [...]
+  "Returns a new sequential table containing the elements of each src table.
+If src is not a table, src itself will be inserted into the new table."
+  (local new [])
+  (each [_ tgt (ipairs [...])]
+    (match (type tgt)
+      :table (each [_ v (ipairs tgt)] (tset new (+ 1 (length new)) v))
+      _      (tset new (+ 1 (length new)) tgt)))
+  new)
+
+(λ break-at-length [str ?line-length]
+  "Formats str so no lines exceed ?line-length (default: 80)."
+  (local lines [])
+  (for [i 0 (str:len) ?line-length]
+    (table.insert lines (str:sub (+ i 1) (+ i ?line-length))))
+  (table.concat lines "\n"))
+
 (fn fetch [url]
   (let [(headers stream) (assert (: (request.new_from_uri url) :go))
         body             (assert (stream:get_body_as_string))]
     (when (not= :200 (headers:get ::status)) (error body))
     (values body headers)))
 
-(fn write-file [path data]
-  (doto (io.open path :w)
-    (: :write (if (= "\n " (data:sub -1)) data
-                  (.. data "\n")))
-    (: :close)))
-
 (local paths {:processed #(.. :docstor/data/ $ :.fnl)
               :raw       #(.. :build/ $ :.fnl)})
-(fn save-docset [key]
-  (assert (= :string (. docsets key)) "key must have url in docsets table")
+(fn fetch-docset [key]
+  (assert (= :string (type (. docsets key)))
+          (.. "key (" key ") must have a url in docsets table"))
   (let [url    (. docsets key)
         txt    (fetch url)
         docset (json.decode txt)
-        file   (paths.raw key)]
-    (print (.. "saving raw '" key "' docset to " file))
-    (write-file file (view docset))
+        path   (paths.raw key)]
+    (print (.. "saving raw '" key "' docset to " path))
+    (with-open [file (io.open path :w)]
+      (file:write (view docset)))
     [key docset]))
 
 (fn mk-doc [path] {:path (or path []) :fields {} :meta {}})
@@ -55,7 +69,7 @@
                       (.. "\nNOTE: These docs were generated; arglist may be inaccurate in cases of"
                           " optional/varargs."))))
         (when args
-          (each [opt arg (unpack args)]
+          (each [opt arg (*unpack args)]
             (if (not arg) (lua :break)
               (-?> arg (. :name)) (set-forcibly! arg arg.name))
             (if (and (= :string (type opt)) (= (opt:sub 1 1) "["))
@@ -69,18 +83,20 @@
 
 (fn build-docset [key]
   (let [data     (fennel.dofile (.. :build/ key :.fnl))
-        [in out] [(paths.raw key) (paths.processed key)]]
-    (print (.. "patching raw docset for " key "from " in))
+        out      (paths.processed key)]
+    (print (.. "patching raw docset for " key "from build/" key :.fnl))
     (local docset (mk-doc []))
     (build-doc-field docset :_G data.global)
     (print (.. "saving processed docset for " key " to " out))
-    (write-file out (view docset))))
+    (with-open [file (io.open out :w)]
+      (file:write (view docset)))))
 
 (match arg
-  [:fetch key] (save-docset key)
+  [:fetch key] (fetch-docset key)
   [:fetch nil] (each [k v (pairs docsets)]
-                 (save-docset k v))
+                 (print k v)
+                 (fetch-docset k v))
   [:build key] (build-docset key)
   [:build nil] (each [k v (pairs docsets)]
                  (build-docset k v))
-  _ (print (.. "unknown args in: " (table.concat [(unpack arg)] ", "))))
+  _ (print (.. "unknown args in: " (table.concat [(*unpack arg)] ", "))))
