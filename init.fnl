@@ -64,4 +64,5 @@ Accepts an options table with the following keys for overriding defaults:
         docset  (gen-requires version)]
     {:docset version :loaded (load-docset tgt-env docset.fields._G)}))
 
-{: install : load-docset}
+(setmetatable {: install : load-docset}
+              {:__call (fn [self ...] (self.install ...))})
