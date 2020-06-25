@@ -36,6 +36,15 @@ It can optionally receive a table to override target Lua / global env:
 ((require :fnldocstor) {:version _VERSION :env _G})
 ```
 
+### Load docs automatically when launching the REPL
+
+Put the following in `$HOME/.fennelrc` or `$HOME/.config/fennel/fennelrc`:
+
+```clojure
+(when (not (pcall #((require :fnldocstor))))
+  (io.stderr:write "Warning: failed to autoload fnldocstor\n"))
+```
+
 ### Load a custom docset
 
 You can also load an arbitrary docset onto any arbitrary function or table of
