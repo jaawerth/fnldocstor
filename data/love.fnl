@@ -111,7 +111,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.audio.setDopplerScale"
                     :fnl/arglist ["scale"]
-                    :fnl/docstring "Sets a global scale factor for velocity-based doppler effects. The default scale\n value is 1.\n\nDocumentation from https://love2d.org/wiki/love.audio.setDopplerScale\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets a global scale factor for velocity-based doppler effects. The default s\ncale value is 1.\n\nDocumentation from https://love2d.org/wiki/love.audio.setDopplerScale\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "audio" "setDopplerScale"]
                 }
@@ -165,7 +165,7 @@
               :meta {
                 :docstor/link "https://love2d.org/wiki/love.conf"
                 :fnl/arglist ["t"]
-                :fnl/docstring "If a file called conf.lua is present in your game folder (or .love file), it is \nrun before the LÖVE modules are loaded. You can use this file to overwrite the \nlove.conf function, which is later called by the LÖVE 'boot' script. Using the \nlove.conf function, you can set some configuration options, and change things li\nke the default size of the window, which modules are loaded, and other stuff.\n\nDocumentation from https://love2d.org/wiki/love.conf\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                :fnl/docstring "If a file called conf.lua is present in your game folder (or .love file), it\n is run before the LÖVE modules are loaded. You can use this file to overwr\nite the love.conf function, which is later called by the LÖVE 'boot' script\n. Using the love.conf function, you can set some configuration options, and \nchange things like the default size of the window, which modules are loaded,\n and other stuff.\n\nDocumentation from https://love2d.org/wiki/love.conf\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
               }
               :path ["_G" "love" "conf"]
             }
@@ -174,7 +174,7 @@
               :meta {
                 :docstor/link "https://love2d.org/wiki/love.directorydropped"
                 :fnl/arglist ["path"]
-                :fnl/docstring "Callback function triggered when a directory is dragged and dropped onto the win\ndow.\n\nDocumentation from https://love2d.org/wiki/love.directorydropped\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                :fnl/docstring "Callback function triggered when a directory is dragged and dropped onto the\n window.\n\nDocumentation from https://love2d.org/wiki/love.directorydropped\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
               }
               :path ["_G" "love" "directorydropped"]
             }
@@ -221,7 +221,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.event.pump"
                     :fnl/arglist {}
-                    :fnl/docstring "Pump events into the event queue. This is a low-level function, and is usually n\not called by the user, but by love.run. Note that this does need to be called fo\nr any OS to think you're still running, and if you want to handle OS-generated e\nvents at all (think callbacks). love.event.pump can only be called from the main\n thread, but afterwards, the rest of love.event can be used from any other threa\nd.\n\nDocumentation from https://love2d.org/wiki/love.event.pump\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Pump events into the event queue. This is a low-level function, and is usual\nly not called by the user, but by love.run. Note that this does need to be c\nalled for any OS to think you're still running, and if you want to handle OS\n-generated events at all (think callbacks). love.event.pump can only be call\ned from the main thread, but afterwards, the rest of love.event can be used \nfrom any other thread.\n\nDocumentation from https://love2d.org/wiki/love.event.pump\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "event" "pump"]
                 }
@@ -257,7 +257,7 @@
               :meta {
                 :docstor/link "https://love2d.org/wiki/love.filedropped"
                 :fnl/arglist ["file"]
-                :fnl/docstring "Callback function triggered when a file is dragged and dropped onto the window.\n\nDocumentation from https://love2d.org/wiki/love.filedropped\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                :fnl/docstring "Callback function triggered when a file is dragged and dropped onto the wind\now.\n\nDocumentation from https://love2d.org/wiki/love.filedropped\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
               }
               :path ["_G" "love" "filedropped"]
             }
@@ -295,7 +295,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.getAppdataDirectory"
                     :fnl/arglist {}
-                    :fnl/docstring "Returns the application data directory (could be the same as getUserDirectory)\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getAppdataDirectory\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Returns the application data directory (could be the same as getUserDirector\ny)\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getAppdataDirectory\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "getAppdataDirectory"]
                 }
@@ -304,7 +304,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.getCRequirePath"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the filesystem paths that will be searched for c libraries when require is \ncalled.\n\nThe paths string returned by this function is a sequence of path templa\ntes separated by semicolons. The argument passed to require will be inserted in \nplace of any question mark (\"?\") character in each template (after the dot chara\ncters in the argument passed to require are replaced by directory separators.) A\ndditionally, any occurrence of a double question mark (\"??\") will be replaced by\n the name passed to require and the default library extension for the platform.\n\n\nThe paths are relative to the game's source and save directories, as well as an\ny paths mounted with love.filesystem.mount.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getCRequirePath\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the filesystem paths that will be searched for c libraries when require\n is called.\n\nThe paths string returned by this function is a sequence of pat\nh templates separated by semicolons. The argument passed to require will be \ninserted in place of any question mark (\"?\") character in each template (aft\ner the dot characters in the argument passed to require are replaced by dire\nctory separators.) Additionally, any occurrence of a double question mark (\"\n??\") will be replaced by the name passed to require and the default library \nextension for the platform.\n\nThe paths are relative to the game's source and\n save directories, as well as any paths mounted with love.filesystem.mount.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getCRequirePath\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "getCRequirePath"]
                 }
@@ -313,7 +313,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.getDirectoryItems"
                     :fnl/arglist ["dir"]
-                    :fnl/docstring "Returns a table with the names of files and subdirectories in the specified path\n. The table is not sorted in any way; the order is undefined.\n\nIf the path passe\nd to the function exists in the game and the save directory, it will list the fi\nles and directories from both places.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getDirectoryItems\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Returns a table with the names of files and subdirectories in the specified \npath. The table is not sorted in any way; the order is undefined.\n\nIf the pa\nth passed to the function exists in the game and the save directory, it will\n list the files and directories from both places.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getDirectoryItems\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "getDirectoryItems"]
                 }
@@ -322,7 +322,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.getIdentity"
                     :fnl/arglist ["name"]
-                    :fnl/docstring "Gets the write directory name for your game. Note that this only returns the nam\ne of the folder to store your files in, not the full location.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getIdentity\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the write directory name for your game. Note that this only returns the\n name of the folder to store your files in, not the full location.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getIdentity\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "getIdentity"]
                 }
@@ -336,7 +336,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.getRealDirectory"
                     :fnl/arglist ["filepath"]
-                    :fnl/docstring "Gets the platform-specific absolute path of the directory containing a filepath.\n\n\nThis can be used to determine whether a file is inside the save directory or t\nhe game's source .love.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getRealDirectory\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the platform-specific absolute path of the directory containing a filep\nath.\n\nThis can be used to determine whether a file is inside the save direct\nory or the game's source .love.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getRealDirectory\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "getRealDirectory"]
                 }
@@ -345,7 +345,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.getRequirePath"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the filesystem paths that will be searched when require is called.\n\nThe pat\nhs string returned by this function is a sequence of path templates separated by\n semicolons. The argument passed to require will be inserted in place of any que\nstion mark (\"?\") character in each template (after the dot characters in the arg\nument passed to require are replaced by directory separators.)\n\nThe paths are re\nlative to the game's source and save directories, as well as any paths mounted w\nith love.filesystem.mount.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getRequirePath\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the filesystem paths that will be searched when require is called.\n\nThe\n paths string returned by this function is a sequence of path templates sepa\nrated by semicolons. The argument passed to require will be inserted in plac\ne of any question mark (\"?\") character in each template (after the dot chara\ncters in the argument passed to require are replaced by directory separators\n.)\n\nThe paths are relative to the game's source and save directories, as wel\nl as any paths mounted with love.filesystem.mount.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getRequirePath\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "getRequirePath"]
                 }
@@ -354,7 +354,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.getSaveDirectory"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the full path to the designated save directory. This can be useful if you w\nant to use the standard io library (or something else) to read or write in the s\nave directory.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getSaveDirectory\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the full path to the designated save directory. This can be useful if y\nou want to use the standard io library (or something else) to read or write \nin the save directory.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getSaveDirectory\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "getSaveDirectory"]
                 }
@@ -363,7 +363,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.getSource"
                     :fnl/arglist {}
-                    :fnl/docstring "Returns the full path to the the .love file or directory. If the game is fused t\no the LÖVE executable, then the executable is returned.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getSource\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Returns the full path to the the .love file or directory. If the game is fus\ned to the LÖVE executable, then the executable is returned.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getSource\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "getSource"]
                 }
@@ -372,7 +372,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.getSourceBaseDirectory"
                     :fnl/arglist {}
-                    :fnl/docstring "Returns the full path to the directory containing the .love file. If the game is\n fused to the LÖVE executable, then the directory containing the executable is \nreturned.\n\nIf love.filesystem.isFused is true, the path returned by this functio\nn can be passed to love.filesystem.mount, which will make the directory containi\nng the main game readable by love.filesystem.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getSourceBaseDirectory\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Returns the full path to the directory containing the .love file. If the gam\ne is fused to the LÖVE executable, then the directory containing the execut\nable is returned.\n\nIf love.filesystem.isFused is true, the path returned by \nthis function can be passed to love.filesystem.mount, which will make the di\nrectory containing the main game readable by love.filesystem.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.getSourceBaseDirectory\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "getSourceBaseDirectory"]
                 }
@@ -399,7 +399,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.init"
                     :fnl/arglist ["appname"]
-                    :fnl/docstring "Initializes love.filesystem, will be called internally, so should not be used ex\nplicitly.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.init\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Initializes love.filesystem, will be called internally, so should not be use\nd explicitly.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.init\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "init"]
                 }
@@ -408,7 +408,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.isFused"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets whether the game is in fused mode or not.\n\nIf a game is in fused mode, its \nsave directory will be directly in the Appdata directory instead of Appdata/LOVE\n/. The game will also be able to load C Lua dynamic libraries which are located \nin the save directory.\n\nA game is in fused mode if the source .love has been fus\ned to the executable (see Game Distribution), or if \"--fused\" has been given as \na command-line argument when starting the game.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.isFused\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets whether the game is in fused mode or not.\n\nIf a game is in fused mode, \nits save directory will be directly in the Appdata directory instead of Appd\nata/LOVE/. The game will also be able to load C Lua dynamic libraries which \nare located in the save directory.\n\nA game is in fused mode if the source .l\nove has been fused to the executable (see Game Distribution), or if \"--fused\n\" has been given as a command-line argument when starting the game.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.isFused\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "isFused"]
                 }
@@ -472,7 +472,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.setCRequirePath"
                     :fnl/arglist ["paths"]
-                    :fnl/docstring "Sets the filesystem paths that will be searched for c libraries when require is \ncalled.\n\nThe paths string returned by this function is a sequence of path templa\ntes separated by semicolons. The argument passed to require will be inserted in \nplace of any question mark (\"?\") character in each template (after the dot chara\ncters in the argument passed to require are replaced by directory separators.) A\ndditionally, any occurrence of a double question mark (\"??\") will be replaced by\n the name passed to require and the default library extension for the platform.\n\n\nThe paths are relative to the game's source and save directories, as well as an\ny paths mounted with love.filesystem.mount.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.setCRequirePath\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets the filesystem paths that will be searched for c libraries when require\n is called.\n\nThe paths string returned by this function is a sequence of pat\nh templates separated by semicolons. The argument passed to require will be \ninserted in place of any question mark (\"?\") character in each template (aft\ner the dot characters in the argument passed to require are replaced by dire\nctory separators.) Additionally, any occurrence of a double question mark (\"\n??\") will be replaced by the name passed to require and the default library \nextension for the platform.\n\nThe paths are relative to the game's source and\n save directories, as well as any paths mounted with love.filesystem.mount.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.setCRequirePath\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "setCRequirePath"]
                 }
@@ -481,7 +481,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.setIdentity"
                     :fnl/arglist ["name" "appendToPath"]
-                    :fnl/docstring "Sets the write directory for your game. Note that you can only set the name of t\nhe folder to store your files in, not the location.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.setIdentity\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets the write directory for your game. Note that you can only set the name \nof the folder to store your files in, not the location.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.setIdentity\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "setIdentity"]
                 }
@@ -490,7 +490,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.setRequirePath"
                     :fnl/arglist ["paths"]
-                    :fnl/docstring "Sets the filesystem paths that will be searched when require is called.\n\nThe pat\nhs string given to this function is a sequence of path templates separated by se\nmicolons. The argument passed to require will be inserted in place of any questi\non mark (\"?\") character in each template (after the dot characters in the argume\nnt passed to require are replaced by directory separators.)\n\nThe paths are relat\nive to the game's source and save directories, as well as any paths mounted with\n love.filesystem.mount.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.setRequirePath\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets the filesystem paths that will be searched when require is called.\n\nThe\n paths string given to this function is a sequence of path templates separat\ned by semicolons. The argument passed to require will be inserted in place o\nf any question mark (\"?\") character in each template (after the dot characte\nrs in the argument passed to require are replaced by directory separators.)\n\n\nThe paths are relative to the game's source and save directories, as well a\ns any paths mounted with love.filesystem.mount.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.setRequirePath\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "setRequirePath"]
                 }
@@ -499,7 +499,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.setSource"
                     :fnl/arglist ["path"]
-                    :fnl/docstring "Sets the source of the game, where the code is present. This function can only b\ne called once, and is normally automatically done by LÖVE.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.setSource\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets the source of the game, where the code is present. This function can on\nly be called once, and is normally automatically done by LÖVE.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.setSource\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "setSource"]
                 }
@@ -508,7 +508,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.setSymlinksEnabled"
                     :fnl/arglist ["enable"]
-                    :fnl/docstring "Sets whether love.filesystem follows symbolic links. It is enabled by default in\n version 0.10.0 and newer, and disabled by default in 0.9.2.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.setSymlinksEnabled\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets whether love.filesystem follows symbolic links. It is enabled by defaul\nt in version 0.10.0 and newer, and disabled by default in 0.9.2.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.setSymlinksEnabled\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "setSymlinksEnabled"]
                 }
@@ -517,7 +517,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.filesystem.unmount"
                     :fnl/arglist ["archive"]
-                    :fnl/docstring "Unmounts a zip file or folder previously mounted for reading with love.filesyste\nm.mount.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.unmount\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Unmounts a zip file or folder previously mounted for reading with love.files\nystem.mount.\n\nDocumentation from https://love2d.org/wiki/love.filesystem.unmount\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "filesystem" "unmount"]
                 }
@@ -582,7 +582,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.applyTransform"
                     :fnl/arglist ["transform"]
-                    :fnl/docstring "Applies the given Transform object to the current coordinate transformation.\n\nTh\nis effectively multiplies the existing coordinate transformation's matrix with t\nhe Transform object's internal matrix to produce the new coordinate transformati\non.\n\nDocumentation from https://love2d.org/wiki/love.graphics.applyTransform\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Applies the given Transform object to the current coordinate transformation.\n\n\nThis effectively multiplies the existing coordinate transformation's matri\nx with the Transform object's internal matrix to produce the new coordinate \ntransformation.\n\nDocumentation from https://love2d.org/wiki/love.graphics.applyTransform\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "applyTransform"]
                 }
@@ -636,7 +636,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.flushBatch"
                     :fnl/arglist {}
-                    :fnl/docstring "Immediately renders any pending automatically batched draws.\n\nLÖVE will call th\nis function internally as needed when most state is changed, so it is not necess\nary to manually call it.\n\nThe current batch will be automatically flushed by lov\ne.graphics state changes (except for the transform stack and the current color),\n as well as Shader:send and methods on Textures which change their state. Using \na different Image in consecutive love.graphics.draw calls will also flush the cu\nrrent batch.\n\nSpriteBatches, ParticleSystems, Meshes, and Text objects do their \nown batching and do not affect automatic batching of other draws.\n\nDocumentation from https://love2d.org/wiki/love.graphics.flushBatch\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Immediately renders any pending automatically batched draws.\n\nLÖVE will cal\nl this function internally as needed when most state is changed, so it is no\nt necessary to manually call it.\n\nThe current batch will be automatically fl\nushed by love.graphics state changes (except for the transform stack and the\n current color), as well as Shader:send and methods on Textures which change\n their state. Using a different Image in consecutive love.graphics.draw call\ns will also flush the current batch.\n\nSpriteBatches, ParticleSystems, Meshes\n, and Text objects do their own batching and do not affect automatic batchin\ng of other draws.\n\nDocumentation from https://love2d.org/wiki/love.graphics.flushBatch\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "flushBatch"]
                 }
@@ -686,7 +686,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.getColorMask"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the active color components used when drawing. Normally all 4 components ar\ne active unless love.graphics.setColorMask has been used.\n\nThe color mask determ\nines whether individual components of the colors of drawn objects will affect th\ne color of the screen. They affect love.graphics.clear and Canvas:clear as well.\n\n\nDocumentation from https://love2d.org/wiki/love.graphics.getColorMask\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the active color components used when drawing. Normally all 4 component\ns are active unless love.graphics.setColorMask has been used.\n\nThe color mas\nk determines whether individual components of the colors of drawn objects wi\nll affect the color of the screen. They affect love.graphics.clear and Canva\ns:clear as well.\n\nDocumentation from https://love2d.org/wiki/love.graphics.getColorMask\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "getColorMask"]
                 }
@@ -704,7 +704,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.getDepthMode"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the current depth test mode and whether writing to the depth buffer is enab\nled.\n\nThis is low-level functionality designed for use with custom vertex shader\ns and Meshes with custom vertex attributes. No higher level APIs are provided to\n set the depth of 2D graphics such as shapes, lines, and Images.\n\nDocumentation from https://love2d.org/wiki/love.graphics.getDepthMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the current depth test mode and whether writing to the depth buffer is \nenabled.\n\nThis is low-level functionality designed for use with custom verte\nx shaders and Meshes with custom vertex attributes. No higher level APIs are\n provided to set the depth of 2D graphics such as shapes, lines, and Images.\n\n\nDocumentation from https://love2d.org/wiki/love.graphics.getDepthMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "getDepthMode"]
                 }
@@ -731,7 +731,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.getFrontFaceWinding"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets whether triangles with clockwise- or counterclockwise-ordered vertices are \nconsidered front-facing.\n\nThis is designed for use in combination with Mesh face\n culling. Other love.graphics shapes, lines, and sprites are not guaranteed to h\nave a specific winding order to their internal vertices.\n\nDocumentation from https://love2d.org/wiki/love.graphics.getFrontFaceWinding\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets whether triangles with clockwise- or counterclockwise-ordered vertices \nare considered front-facing.\n\nThis is designed for use in combination with M\nesh face culling. Other love.graphics shapes, lines, and sprites are not gua\nranteed to have a specific winding order to their internal vertices.\n\nDocumentation from https://love2d.org/wiki/love.graphics.getFrontFaceWinding\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "getFrontFaceWinding"]
                 }
@@ -749,7 +749,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.getImageFormats"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the raw and compressed pixel formats usable for Images, and whether each is\n supported.\n\nDocumentation from https://love2d.org/wiki/love.graphics.getImageFormats\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the raw and compressed pixel formats usable for Images, and whether eac\nh is supported.\n\nDocumentation from https://love2d.org/wiki/love.graphics.getImageFormats\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "getImageFormats"]
                 }
@@ -785,7 +785,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.getMeshCullMode"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets whether back-facing triangles in a Mesh are culled.\n\nMesh face culling is d\nesigned for use with low level custom hardware-accelerated 3D rendering via cust\nom vertex attributes on Meshes, custom vertex shaders, and depth testing with a \ndepth buffer.\n\nDocumentation from https://love2d.org/wiki/love.graphics.getMeshCullMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets whether back-facing triangles in a Mesh are culled.\n\nMesh face culling \nis designed for use with low level custom hardware-accelerated 3D rendering \nvia custom vertex attributes on Meshes, custom vertex shaders, and depth tes\nting with a depth buffer.\n\nDocumentation from https://love2d.org/wiki/love.graphics.getMeshCullMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "getMeshCullMode"]
                 }
@@ -830,7 +830,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.getStackDepth"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the current depth of the transform / state stack (the number of pushes with\nout corresponding pops).\n\nDocumentation from https://love2d.org/wiki/love.graphics.getStackDepth\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the current depth of the transform / state stack (the number of pushes \nwithout corresponding pops).\n\nDocumentation from https://love2d.org/wiki/love.graphics.getStackDepth\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "getStackDepth"]
                 }
@@ -848,7 +848,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.getStencilTest"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets whether stencil testing is enabled.\n\nWhen stencil testing is enabled, the g\neometry of everything that is drawn will be clipped / stencilled out based on wh\nether it intersects with what has been previously drawn to the stencil buffer.\n\n\nEach Canvas has its own stencil buffer.\n\nDocumentation from https://love2d.org/wiki/love.graphics.getStencilTest\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets whether stencil testing is enabled.\n\nWhen stencil testing is enabled, t\nhe geometry of everything that is drawn will be clipped / stencilled out bas\ned on whether it intersects with what has been previously drawn to the stenc\nil buffer.\n\nEach Canvas has its own stencil buffer.\n\nDocumentation from https://love2d.org/wiki/love.graphics.getStencilTest\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "getStencilTest"]
                 }
@@ -857,7 +857,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.getSupported"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the optional graphics features and whether they're supported on the system.\n\n\nSome older or low-end systems don't always support all graphics features.\n\nDocumentation from https://love2d.org/wiki/love.graphics.getSupported\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the optional graphics features and whether they're supported on the sys\ntem.\n\nSome older or low-end systems don't always support all graphics featur\nes.\n\nDocumentation from https://love2d.org/wiki/love.graphics.getSupported\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "getSupported"]
                 }
@@ -898,7 +898,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.inverseTransformPoint"
                     :fnl/arglist ["screenX" "screenY"]
-                    :fnl/docstring "Converts the given 2D position from screen-space into global coordinates.\n\nThis \neffectively applies the reverse of the current graphics transformations to the g\niven position. A similar Transform:inverseTransformPoint method exists for Trans\nform objects.\n\nDocumentation from https://love2d.org/wiki/love.graphics.inverseTransformPoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Converts the given 2D position from screen-space into global coordinates.\n\nT\nhis effectively applies the reverse of the current graphics transformations \nto the given position. A similar Transform:inverseTransformPoint method exis\nts for Transform objects.\n\nDocumentation from https://love2d.org/wiki/love.graphics.inverseTransformPoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "inverseTransformPoint"]
                 }
@@ -907,7 +907,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.isGammaCorrect"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets whether gamma-correct rendering is supported and enabled. It can be enabled\n by setting t.gammacorrect = true in love.conf.\n\nNot all devices support gamma-c\norrect rendering, in which case it will be automatically disabled and this funct\nion will return false. It is supported on desktop systems which have graphics ca\nrds that are capable of using OpenGL 3 / DirectX 10, and iOS devices that can us\ne OpenGL ES 3.\n\nDocumentation from https://love2d.org/wiki/love.graphics.isGammaCorrect\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets whether gamma-correct rendering is supported and enabled. It can be ena\nbled by setting t.gammacorrect = true in love.conf.\n\nNot all devices support\n gamma-correct rendering, in which case it will be automatically disabled an\nd this function will return false. It is supported on desktop systems which \nhave graphics cards that are capable of using OpenGL 3 / DirectX 10, and iOS\n devices that can use OpenGL ES 3.\n\nDocumentation from https://love2d.org/wiki/love.graphics.isGammaCorrect\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "isGammaCorrect"]
                 }
@@ -930,7 +930,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.newCanvas"
                     :fnl/arglist ["width" "height" "format" "msaa"]
-                    :fnl/docstring "Creates a new Canvas object for offscreen rendering.\n\nAntialiased Canvases have \nslightly higher system requirements than normal Canvases. Additionally, the supp\norted maximum number of MSAA samples varies depending on the system. Use love.gr\naphics.getSystemLimit to check.\n\nIf the number of MSAA samples specified is grea\nter than the maximum supported by the system, the Canvas will still be created b\nut only using the maximum supported amount (this includes 0.)\n\nDocumentation from https://love2d.org/wiki/love.graphics.newCanvas\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Creates a new Canvas object for offscreen rendering.\n\nAntialiased Canvases h\nave slightly higher system requirements than normal Canvases. Additionally, \nthe supported maximum number of MSAA samples varies depending on the system.\n Use love.graphics.getSystemLimit to check.\n\nIf the number of MSAA samples s\npecified is greater than the maximum supported by the system, the Canvas wil\nl still be created but only using the maximum supported amount (this include\ns 0.)\n\nDocumentation from https://love2d.org/wiki/love.graphics.newCanvas\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "newCanvas"]
                 }
@@ -968,7 +968,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.newQuad"
                     :fnl/arglist ["x" "y" "width" "height" "sw" "sh"]
-                    :fnl/docstring "Creates a new Quad.\n\nThe purpose of a Quad is to describe the result of the foll\nowing transformation on any drawable object. The object is first scaled to dimen\nsions sw * sh. The Quad then describes the rectangular area of dimensions width \n* height whose upper left corner is at position (x, y) inside the scaled object.\n\n\nDocumentation from https://love2d.org/wiki/love.graphics.newQuad\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Creates a new Quad.\n\nThe purpose of a Quad is to describe the result of the \nfollowing transformation on any drawable object. The object is first scaled \nto dimensions sw * sh. The Quad then describes the rectangular area of dimen\nsions width * height whose upper left corner is at position (x, y) inside th\ne scaled object.\n\nDocumentation from https://love2d.org/wiki/love.graphics.newQuad\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "newQuad"]
                 }
@@ -1005,7 +1005,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.origin"
                     :fnl/arglist {}
-                    :fnl/docstring "Resets the current coordinate transformation.\n\nThis function is always used to r\neverse any previous calls to love.graphics.rotate, love.graphics.scale, love.gra\nphics.shear or love.graphics.translate. It returns the current transformation st\nate to its defaults.\n\nDocumentation from https://love2d.org/wiki/love.graphics.origin\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Resets the current coordinate transformation.\n\nThis function is always used \nto reverse any previous calls to love.graphics.rotate, love.graphics.scale, \nlove.graphics.shear or love.graphics.translate. It returns the current trans\nformation state to its defaults.\n\nDocumentation from https://love2d.org/wiki/love.graphics.origin\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "origin"]
                 }
@@ -1024,7 +1024,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.pop"
                     :fnl/arglist {}
-                    :fnl/docstring "Pops the current coordinate transformation from the transformation stack.\n\nThis \nfunction is always used to reverse a previous push operation. It returns the cur\nrent transformation state to what it was before the last preceding push. For an \nexample, see the description of love.graphics.push.\n\nDocumentation from https://love2d.org/wiki/love.graphics.pop\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Pops the current coordinate transformation from the transformation stack.\n\nT\nhis function is always used to reverse a previous push operation. It returns\n the current transformation state to what it was before the last preceding p\nush. For an example, see the description of love.graphics.push.\n\nDocumentation from https://love2d.org/wiki/love.graphics.pop\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "pop"]
                 }
@@ -1033,7 +1033,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.present"
                     :fnl/arglist {}
-                    :fnl/docstring "Displays the results of drawing operations on the screen.\n\nThis function is used\n when writing your own love.run function. It presents all the results of your dr\nawing operations on the screen. See the example in love.run for a typical use of\n this function.\n\nDocumentation from https://love2d.org/wiki/love.graphics.present\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Displays the results of drawing operations on the screen.\n\nThis function is \nused when writing your own love.run function. It presents all the results of\n your drawing operations on the screen. See the example in love.run for a ty\npical use of this function.\n\nDocumentation from https://love2d.org/wiki/love.graphics.present\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "present"]
                 }
@@ -1052,7 +1052,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.push"
                     :fnl/arglist ["stack"]
-                    :fnl/docstring "Copies and pushes the current coordinate transformation to the transformation st\nack.\n\nThis function is always used to prepare for a corresponding pop operation \nlater. It stores the current coordinate transformation state into the transforma\ntion stack and keeps it active. Later changes to the transformation can be undon\ne by using the pop operation, which returns the coordinate transform to the stat\ne it was in before calling push.\n\nDocumentation from https://love2d.org/wiki/love.graphics.push\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Copies and pushes the current coordinate transformation to the transformatio\nn stack.\n\nThis function is always used to prepare for a corresponding pop op\neration later. It stores the current coordinate transformation state into th\ne transformation stack and keeps it active. Later changes to the transformat\nion can be undone by using the pop operation, which returns the coordinate t\nransform to the state it was in before calling push.\n\nDocumentation from https://love2d.org/wiki/love.graphics.push\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "push"]
                 }
@@ -1066,7 +1066,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.replaceTransform"
                     :fnl/arglist ["transform"]
-                    :fnl/docstring "Replaces the current coordinate transformation with the given Transform object.\n\nDocumentation from https://love2d.org/wiki/love.graphics.replaceTransform\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Replaces the current coordinate transformation with the given Transform obje\nct.\n\nDocumentation from https://love2d.org/wiki/love.graphics.replaceTransform\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "replaceTransform"]
                 }
@@ -1075,7 +1075,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.reset"
                     :fnl/arglist {}
-                    :fnl/docstring "Resets the current graphics settings.\n\nCalling reset makes the current drawing c\nolor white, the current background color black, resets any active Canvas or Shad\ner, and removes any scissor settings. It sets the BlendMode to alpha. It also se\nts both the point and line drawing modes to smooth and their sizes to 1.0.\n\nDocumentation from https://love2d.org/wiki/love.graphics.reset\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Resets the current graphics settings.\n\nCalling reset makes the current drawi\nng color white, the current background color black, resets any active Canvas\n or Shader, and removes any scissor settings. It sets the BlendMode to alpha\n. It also sets both the point and line drawing modes to smooth and their siz\nes to 1.0.\n\nDocumentation from https://love2d.org/wiki/love.graphics.reset\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "reset"]
                 }
@@ -1084,7 +1084,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.rotate"
                     :fnl/arglist ["angle"]
-                    :fnl/docstring "Rotates the coordinate system in two dimensions.\n\nCalling this function affects \nall future drawing operations by rotating the coordinate system around the origi\nn by the given amount of radians. This change lasts until love.draw exits.\n\nDocumentation from https://love2d.org/wiki/love.graphics.rotate\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Rotates the coordinate system in two dimensions.\n\nCalling this function affe\ncts all future drawing operations by rotating the coordinate system around t\nhe origin by the given amount of radians. This change lasts until love.draw \nexits.\n\nDocumentation from https://love2d.org/wiki/love.graphics.rotate\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "rotate"]
                 }
@@ -1093,7 +1093,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.scale"
                     :fnl/arglist ["sx" "sy"]
-                    :fnl/docstring "Scales the coordinate system in two dimensions.\n\nBy default the coordinate syste\nm in LÖVE corresponds to the display pixels in horizontal and vertical directio\nns one-to-one, and the x-axis increases towards the right while the y-axis incre\nases downwards. Scaling the coordinate system changes this relation.\n\nAfter scal\ning by sx and sy, all coordinates are treated as if they were multiplied by sx a\nnd sy. Every result of a drawing operation is also correspondingly scaled, so sc\naling by (2, 2) for example would mean making everything twice as large in both \nx- and y-directions. Scaling by a negative value flips the coordinate system in \nthe corresponding direction, which also means everything will be drawn flipped o\nr upside down, or both. Scaling by zero is not a useful operation.\n\nScale and tr\nanslate are not commutative operations, therefore, calling them in different ord\ners will change the outcome.\n\nScaling lasts until love.draw exits.\n\nDocumentation from https://love2d.org/wiki/love.graphics.scale\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Scales the coordinate system in two dimensions.\n\nBy default the coordinate s\nystem in LÖVE corresponds to the display pixels in horizontal and vertical \ndirections one-to-one, and the x-axis increases towards the right while the \ny-axis increases downwards. Scaling the coordinate system changes this relat\nion.\n\nAfter scaling by sx and sy, all coordinates are treated as if they wer\ne multiplied by sx and sy. Every result of a drawing operation is also corre\nspondingly scaled, so scaling by (2, 2) for example would mean making everyt\nhing twice as large in both x- and y-directions. Scaling by a negative value\n flips the coordinate system in the corresponding direction, which also mean\ns everything will be drawn flipped or upside down, or both. Scaling by zero \nis not a useful operation.\n\nScale and translate are not commutative operatio\nns, therefore, calling them in different orders will change the outcome.\n\nSc\naling lasts until love.draw exits.\n\nDocumentation from https://love2d.org/wiki/love.graphics.scale\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "scale"]
                 }
@@ -1127,7 +1127,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.setDefaultFilter"
                     :fnl/arglist ["min" "mag" "anisotropy"]
-                    :fnl/docstring "Sets the default scaling filters used with Images, Canvases, and Fonts.\n\nThis fu\nnction does not apply retroactively to loaded images.\n\nDocumentation from https://love2d.org/wiki/love.graphics.setDefaultFilter\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets the default scaling filters used with Images, Canvases, and Fonts.\n\nThi\ns function does not apply retroactively to loaded images.\n\nDocumentation from https://love2d.org/wiki/love.graphics.setDefaultFilter\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "setDefaultFilter"]
                 }
@@ -1136,7 +1136,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.setDepthMode"
                     :fnl/arglist ["comparemode" "write"]
-                    :fnl/docstring "Configures depth testing and writing to the depth buffer.\n\nThis is low-level fun\nctionality designed for use with custom vertex shaders and Meshes with custom ve\nrtex attributes. No higher level APIs are provided to set the depth of 2D graphi\ncs such as shapes, lines, and Images.\n\nDocumentation from https://love2d.org/wiki/love.graphics.setDepthMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Configures depth testing and writing to the depth buffer.\n\nThis is low-level\n functionality designed for use with custom vertex shaders and Meshes with c\nustom vertex attributes. No higher level APIs are provided to set the depth \nof 2D graphics such as shapes, lines, and Images.\n\nDocumentation from https://love2d.org/wiki/love.graphics.setDepthMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "setDepthMode"]
                 }
@@ -1145,7 +1145,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.setFont"
                     :fnl/arglist ["font"]
-                    :fnl/docstring "Set an already-loaded Font as the current font or create and load a new one from\n the file and size.\n\nIt's recommended that Font objects are created with love.gr\naphics.newFont in the loading stage and then passed to this function in the draw\ning stage.\n\nDocumentation from https://love2d.org/wiki/love.graphics.setFont\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Set an already-loaded Font as the current font or create and load a new one \nfrom the file and size.\n\nIt's recommended that Font objects are created with\n love.graphics.newFont in the loading stage and then passed to this function\n in the drawing stage.\n\nDocumentation from https://love2d.org/wiki/love.graphics.setFont\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "setFont"]
                 }
@@ -1154,7 +1154,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.setFrontFaceWinding"
                     :fnl/arglist ["winding"]
-                    :fnl/docstring "Sets whether triangles with clockwise- or counterclockwise-ordered vertices are \nconsidered front-facing.\n\nThis is designed for use in combination with Mesh face\n culling. Other love.graphics shapes, lines, and sprites are not guaranteed to h\nave a specific winding order to their internal vertices.\n\nDocumentation from https://love2d.org/wiki/love.graphics.setFrontFaceWinding\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets whether triangles with clockwise- or counterclockwise-ordered vertices \nare considered front-facing.\n\nThis is designed for use in combination with M\nesh face culling. Other love.graphics shapes, lines, and sprites are not gua\nranteed to have a specific winding order to their internal vertices.\n\nDocumentation from https://love2d.org/wiki/love.graphics.setFrontFaceWinding\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "setFrontFaceWinding"]
                 }
@@ -1190,7 +1190,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.setMeshCullMode"
                     :fnl/arglist ["mode"]
-                    :fnl/docstring "Sets whether back-facing triangles in a Mesh are culled.\n\nThis is designed for u\nse with low level custom hardware-accelerated 3D rendering via custom vertex att\nributes on Meshes, custom vertex shaders, and depth testing with a depth buffer.\n\n\nDocumentation from https://love2d.org/wiki/love.graphics.setMeshCullMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets whether back-facing triangles in a Mesh are culled.\n\nThis is designed f\nor use with low level custom hardware-accelerated 3D rendering via custom ve\nrtex attributes on Meshes, custom vertex shaders, and depth testing with a d\nepth buffer.\n\nDocumentation from https://love2d.org/wiki/love.graphics.setMeshCullMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "setMeshCullMode"]
                 }
@@ -1228,7 +1228,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.setWireframe"
                     :fnl/arglist ["enable"]
-                    :fnl/docstring "Sets whether wireframe lines will be used when drawing.\n\nWireframe mode should o\nnly be used for debugging. The lines drawn with it enabled do not behave like re\ngular love.graphics lines: their widths don't scale with the coordinate transfor\nmations or with love.graphics.setLineWidth, and they don't use the smooth LineSt\nyle.\n\nDocumentation from https://love2d.org/wiki/love.graphics.setWireframe\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets whether wireframe lines will be used when drawing.\n\nWireframe mode shou\nld only be used for debugging. The lines drawn with it enabled do not behave\n like regular love.graphics lines: their widths don't scale with the coordin\nate transformations or with love.graphics.setLineWidth, and they don't use t\nhe smooth LineStyle.\n\nDocumentation from https://love2d.org/wiki/love.graphics.setWireframe\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "setWireframe"]
                 }
@@ -1246,7 +1246,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.stencil"
                     :fnl/arglist ["stencilfunction" "action" "value" "keepvalues"]
-                    :fnl/docstring "Draws geometry as a stencil.\n\nThe geometry drawn by the supplied function sets i\nnvisible stencil values of pixels, instead of setting pixel colors. The stencil \nvalues of pixels can act like a mask / stencil - love.graphics.setStencilTest ca\nn be used afterward to determine how further rendering is affected by the stenci\nl values in each pixel.\n\nEach Canvas has its own per-pixel stencil values. Stenc\nil values are within the range of [0, 255].\n\nDocumentation from https://love2d.org/wiki/love.graphics.stencil\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Draws geometry as a stencil.\n\nThe geometry drawn by the supplied function se\nts invisible stencil values of pixels, instead of setting pixel colors. The \nstencil values of pixels can act like a mask / stencil - love.graphics.setSt\nencilTest can be used afterward to determine how further rendering is affect\ned by the stencil values in each pixel.\n\nEach Canvas has its own per-pixel s\ntencil values. Stencil values are within the range of [0, 255].\n\nDocumentation from https://love2d.org/wiki/love.graphics.stencil\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "stencil"]
                 }
@@ -1255,7 +1255,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.transformPoint"
                     :fnl/arglist ["globalX" "globalY"]
-                    :fnl/docstring "Converts the given 2D position from global coordinates into screen-space.\n\nThis \neffectively applies the current graphics transformations to the given position. \nA similar Transform:transformPoint method exists for Transform objects.\n\nDocumentation from https://love2d.org/wiki/love.graphics.transformPoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Converts the given 2D position from global coordinates into screen-space.\n\nT\nhis effectively applies the current graphics transformations to the given po\nsition. A similar Transform:transformPoint method exists for Transform objec\nts.\n\nDocumentation from https://love2d.org/wiki/love.graphics.transformPoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "transformPoint"]
                 }
@@ -1264,7 +1264,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.graphics.translate"
                     :fnl/arglist ["dx" "dy"]
-                    :fnl/docstring "Translates the coordinate system in two dimensions.\n\nWhen this function is calle\nd with two numbers, dx, and dy, all the following drawing operations take effect\n as if their x and y coordinates were x+dx and y+dy.\n\nScale and translate are no\nt commutative operations, therefore, calling them in different orders will chang\ne the outcome.\n\nThis change lasts until love.graphics.clear is called (which is \ncalled automatically before love.draw in the default love.run function), or a lo\nve.graphics.pop reverts to a previous coordinate system state.\n\nTranslating usin\ng whole numbers will prevent tearing/blurring of images and fonts draw after tra\nnslating.\n\nDocumentation from https://love2d.org/wiki/love.graphics.translate\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Translates the coordinate system in two dimensions.\n\nWhen this function is c\nalled with two numbers, dx, and dy, all the following drawing operations tak\ne effect as if their x and y coordinates were x+dx and y+dy.\n\nScale and tran\nslate are not commutative operations, therefore, calling them in different o\nrders will change the outcome.\n\nThis change lasts until love.graphics.clear \nis called (which is called automatically before love.draw in the default lov\ne.run function), or a love.graphics.pop reverts to a previous coordinate sys\ntem state.\n\nTranslating using whole numbers will prevent tearing/blurring of\n images and fonts draw after translating.\n\nDocumentation from https://love2d.org/wiki/love.graphics.translate\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "graphics" "translate"]
                 }
@@ -1282,7 +1282,7 @@
               :meta {
                 :docstor/link "https://love2d.org/wiki/love.hasDeprecationOutput"
                 :fnl/arglist {}
-                :fnl/docstring "Gets whether LÖVE displays warnings when using deprecated functionality. It is \ndisabled by default in fused mode, and enabled by default otherwise.\n\nWhen depre\ncation output is enabled, the first use of a formally deprecated LÖVE API will \nshow a message at the bottom of the screen for a short time, and print the messa\nge to the console.\n\nDocumentation from https://love2d.org/wiki/love.hasDeprecationOutput\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                :fnl/docstring "Gets whether LÖVE displays warnings when using deprecated functionality. It\n is disabled by default in fused mode, and enabled by default otherwise.\n\nWh\nen deprecation output is enabled, the first use of a formally deprecated LÖ\nVE API will show a message at the bottom of the screen for a short time, and\n print the message to the console.\n\nDocumentation from https://love2d.org/wiki/love.hasDeprecationOutput\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
               }
               :path ["_G" "love" "hasDeprecationOutput"]
             }
@@ -1351,7 +1351,7 @@
               :meta {
                 :docstor/link "https://love2d.org/wiki/love.joystickadded"
                 :fnl/arglist ["joystick"]
-                :fnl/docstring "Called when a Joystick is connected.\n\nThis callback is also triggered after love\n.load for every Joystick which was already connected when the game started up.\n\nDocumentation from https://love2d.org/wiki/love.joystickadded\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                :fnl/docstring "Called when a Joystick is connected.\n\nThis callback is also triggered after \nlove.load for every Joystick which was already connected when the game start\ned up.\n\nDocumentation from https://love2d.org/wiki/love.joystickadded\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
               }
               :path ["_G" "love" "joystickadded"]
             }
@@ -1407,7 +1407,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.keyboard.getKeyFromScancode"
                     :fnl/arglist ["scancode"]
-                    :fnl/docstring "Gets the key corresponding to the given hardware scancode.\n\nUnlike key constants\n, Scancodes are keyboard layout-independent. For example the scancode \"w\" will b\ne generated if the key in the same place as the \"w\" key on an American keyboard \nis pressed, no matter what the key is labelled or what the user's operating syst\nem settings are.\n\nScancodes are useful for creating default controls that have t\nhe same physical locations on on all systems.\n\nDocumentation from https://love2d.org/wiki/love.keyboard.getKeyFromScancode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the key corresponding to the given hardware scancode.\n\nUnlike key const\nants, Scancodes are keyboard layout-independent. For example the scancode \"w\n\" will be generated if the key in the same place as the \"w\" key on an Americ\nan keyboard is pressed, no matter what the key is labelled or what the user'\ns operating system settings are.\n\nScancodes are useful for creating default \ncontrols that have the same physical locations on on all systems.\n\nDocumentation from https://love2d.org/wiki/love.keyboard.getKeyFromScancode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "keyboard" "getKeyFromScancode"]
                 }
@@ -1416,7 +1416,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.keyboard.getScancodeFromKey"
                     :fnl/arglist ["key"]
-                    :fnl/docstring "Gets the hardware scancode corresponding to the given key.\n\nUnlike key constants\n, Scancodes are keyboard layout-independent. For example the scancode \"w\" will b\ne generated if the key in the same place as the \"w\" key on an American keyboard \nis pressed, no matter what the key is labelled or what the user's operating syst\nem settings are.\n\nScancodes are useful for creating default controls that have t\nhe same physical locations on on all systems.\n\nDocumentation from https://love2d.org/wiki/love.keyboard.getScancodeFromKey\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the hardware scancode corresponding to the given key.\n\nUnlike key const\nants, Scancodes are keyboard layout-independent. For example the scancode \"w\n\" will be generated if the key in the same place as the \"w\" key on an Americ\nan keyboard is pressed, no matter what the key is labelled or what the user'\ns operating system settings are.\n\nScancodes are useful for creating default \ncontrols that have the same physical locations on on all systems.\n\nDocumentation from https://love2d.org/wiki/love.keyboard.getScancodeFromKey\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "keyboard" "getScancodeFromKey"]
                 }
@@ -1448,7 +1448,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.keyboard.isScancodeDown"
                     :fnl/arglist ["scancode" "..."]
-                    :fnl/docstring "Checks whether the specified Scancodes are pressed. Not to be confused with love\n.keypressed or love.keyreleased.\n\nUnlike regular KeyConstants, Scancodes are key\nboard layout-independent. The scancode \"w\" is used if the key in the same place \nas the \"w\" key on an American keyboard is pressed, no matter what the key is lab\nelled or what the user's operating system settings are.\n\nDocumentation from https://love2d.org/wiki/love.keyboard.isScancodeDown\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Checks whether the specified Scancodes are pressed. Not to be confused with \nlove.keypressed or love.keyreleased.\n\nUnlike regular KeyConstants, Scancodes\n are keyboard layout-independent. The scancode \"w\" is used if the key in the\n same place as the \"w\" key on an American keyboard is pressed, no matter wha\nt the key is labelled or what the user's operating system settings are.\n\nDocumentation from https://love2d.org/wiki/love.keyboard.isScancodeDown\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "keyboard" "isScancodeDown"]
                 }
@@ -1457,7 +1457,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.keyboard.setKeyRepeat"
                     :fnl/arglist ["enable"]
-                    :fnl/docstring "Enables or disables key repeat. It is disabled by default.\n\nThe interval between\n repeats depends on the user's system settings.\n\nDocumentation from https://love2d.org/wiki/love.keyboard.setKeyRepeat\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Enables or disables key repeat. It is disabled by default.\n\nThe interval bet\nween repeats depends on the user's system settings.\n\nDocumentation from https://love2d.org/wiki/love.keyboard.setKeyRepeat\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "keyboard" "setKeyRepeat"]
                 }
@@ -1502,7 +1502,7 @@
               :meta {
                 :docstor/link "https://love2d.org/wiki/love.lowmemory"
                 :fnl/arglist {}
-                :fnl/docstring "Callback function triggered when the system is running out of memory on mobile d\nevices.\n\n Mobile operating systems may forcefully kill the game if it uses too m\nuch memory, so any non-critical resource should be removed if possible (by setti\nng all variables referencing the resources to nil, and calling collectgarbage())\n, when this event is triggered. Sounds and images in particular tend to use the \nmost memory.\n\nDocumentation from https://love2d.org/wiki/love.lowmemory\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                :fnl/docstring "Callback function triggered when the system is running out of memory on mobi\nle devices.\n\n Mobile operating systems may forcefully kill the game if it us\nes too much memory, so any non-critical resource should be removed if possib\nle (by setting all variables referencing the resources to nil, and calling c\nollectgarbage()), when this event is triggered. Sounds and images in particu\nlar tend to use the most memory.\n\nDocumentation from https://love2d.org/wiki/love.lowmemory\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
               }
               :path ["_G" "love" "lowmemory"]
             }
@@ -1528,7 +1528,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.math.getRandomSeed"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the seed of the random number generator.\n\nThe state is split into two numbe\nrs due to Lua's use of doubles for all number values - doubles can't accurately \nrepresent integer values above 2^53.\n\nDocumentation from https://love2d.org/wiki/love.math.getRandomSeed\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the seed of the random number generator.\n\nThe state is split into two n\numbers due to Lua's use of doubles for all number values - doubles can't acc\nurately represent integer values above 2^53.\n\nDocumentation from https://love2d.org/wiki/love.math.getRandomSeed\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "math" "getRandomSeed"]
                 }
@@ -1537,7 +1537,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.math.getRandomState"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the current state of the random number generator. This returns an opaque im\nplementation-dependent string which is only useful for later use with RandomGene\nrator:setState.\n\nThis is different from RandomGenerator:getSeed in that getState\n gets the RandomGenerator's current state, whereas getSeed gets the previously s\net seed number.\n\nThe value of the state string does not depend on the current op\nerating system.\n\nDocumentation from https://love2d.org/wiki/love.math.getRandomState\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the current state of the random number generator. This returns an opaqu\ne implementation-dependent string which is only useful for later use with Ra\nndomGenerator:setState.\n\nThis is different from RandomGenerator:getSeed in t\nhat getState gets the RandomGenerator's current state, whereas getSeed gets \nthe previously set seed number.\n\nThe value of the state string does not depe\nnd on the current operating system.\n\nDocumentation from https://love2d.org/wiki/love.math.getRandomState\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "math" "getRandomState"]
                 }
@@ -1595,7 +1595,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.math.setRandomState"
                     :fnl/arglist ["state"]
-                    :fnl/docstring "Gets the current state of the random number generator. This returns an opaque im\nplementation-dependent string which is only useful for later use with RandomGene\nrator:setState.\n\nThis is different from RandomGenerator:getSeed in that getState\n gets the RandomGenerator's current state, whereas getSeed gets the previously s\net seed number.\n\nThe value of the state string does not depend on the current op\nerating system.\n\nDocumentation from https://love2d.org/wiki/love.math.setRandomState\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the current state of the random number generator. This returns an opaqu\ne implementation-dependent string which is only useful for later use with Ra\nndomGenerator:setState.\n\nThis is different from RandomGenerator:getSeed in t\nhat getState gets the RandomGenerator's current state, whereas getSeed gets \nthe previously set seed number.\n\nThe value of the state string does not depe\nnd on the current operating system.\n\nDocumentation from https://love2d.org/wiki/love.math.setRandomState\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "math" "setRandomState"]
                 }
@@ -1633,7 +1633,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.mouse.getRelativeMode"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets whether relative mode is enabled for the mouse.\n\nIf relative mode is enable\nd, the cursor is hidden and doesn't move when the mouse does, but relative mouse\n motion events are still generated via love.mousemoved. This lets the mouse move\n in any direction indefinitely without the cursor getting stuck at the edges of \nthe screen.\n\nThe reported position of the mouse is not updated while relative mo\nde is enabled, even when relative mouse motion events are generated.\n\nDocumentation from https://love2d.org/wiki/love.mouse.getRelativeMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets whether relative mode is enabled for the mouse.\n\nIf relative mode is en\nabled, the cursor is hidden and doesn't move when the mouse does, but relati\nve mouse motion events are still generated via love.mousemoved. This lets th\ne mouse move in any direction indefinitely without the cursor getting stuck \nat the edges of the screen.\n\nThe reported position of the mouse is not updat\ned while relative mode is enabled, even when relative mouse motion events ar\ne generated.\n\nDocumentation from https://love2d.org/wiki/love.mouse.getRelativeMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "mouse" "getRelativeMode"]
                 }
@@ -1642,7 +1642,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.mouse.getSystemCursor"
                     :fnl/arglist ["ctype"]
-                    :fnl/docstring "Gets a Cursor object representing a system-native hardware cursor.\n\n Hardware cu\nrsors are framerate-independent and work the same way as normal operating system\n cursors. Unlike drawing an image at the mouse's current coordinates, hardware c\nursors never have visible lag between when the mouse is moved and when the curso\nr position updates, even at low framerates.\n\nDocumentation from https://love2d.org/wiki/love.mouse.getSystemCursor\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets a Cursor object representing a system-native hardware cursor.\n\n Hardwar\ne cursors are framerate-independent and work the same way as normal operatin\ng system cursors. Unlike drawing an image at the mouse's current coordinates\n, hardware cursors never have visible lag between when the mouse is moved an\nd when the cursor position updates, even at low framerates.\n\nDocumentation from https://love2d.org/wiki/love.mouse.getSystemCursor\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "mouse" "getSystemCursor"]
                 }
@@ -1669,7 +1669,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.mouse.hasCursor"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets whether cursor functionality is supported.\n\nIf it isn't supported, calling \nlove.mouse.newCursor and love.mouse.getSystemCursor will cause an error. Mobile \ndevices do not support cursors.\n\nDocumentation from https://love2d.org/wiki/love.mouse.hasCursor\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets whether cursor functionality is supported.\n\nIf it isn't supported, call\ning love.mouse.newCursor and love.mouse.getSystemCursor will cause an error.\n Mobile devices do not support cursors.\n\nDocumentation from https://love2d.org/wiki/love.mouse.hasCursor\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "mouse" "hasCursor"]
                 }
@@ -1678,7 +1678,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.mouse.isCursorSupported"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets whether cursor functionality is supported.\n\nIf it isn't supported, calling \nlove.mouse.newCursor and love.mouse.getSystemCursor will cause an error. Mobile \ndevices do not support cursors.\n\nDocumentation from https://love2d.org/wiki/love.mouse.isCursorSupported\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets whether cursor functionality is supported.\n\nIf it isn't supported, call\ning love.mouse.newCursor and love.mouse.getSystemCursor will cause an error.\n Mobile devices do not support cursors.\n\nDocumentation from https://love2d.org/wiki/love.mouse.isCursorSupported\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "mouse" "isCursorSupported"]
                 }
@@ -1687,7 +1687,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.mouse.isDown"
                     :fnl/arglist ["button" "..."]
-                    :fnl/docstring "Checks whether a certain mouse button is down. This function does not detect mou\nsewheel scrolling; you must use the love.wheelmoved (or love.mousepressed in ver\nsion 0.9.2 and older) callback for that.\n\nDocumentation from https://love2d.org/wiki/love.mouse.isDown\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Checks whether a certain mouse button is down. This function does not detect\n mousewheel scrolling; you must use the love.wheelmoved (or love.mousepresse\nd in version 0.9.2 and older) callback for that.\n\nDocumentation from https://love2d.org/wiki/love.mouse.isDown\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "mouse" "isDown"]
                 }
@@ -1742,7 +1742,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.mouse.setRelativeMode"
                     :fnl/arglist ["enable"]
-                    :fnl/docstring "Sets whether relative mode is enabled for the mouse.\n\nWhen relative mode is enab\nled, the cursor is hidden and doesn't move when the mouse does, but relative mou\nse motion events are still generated via love.mousemoved. This lets the mouse mo\nve in any direction indefinitely without the cursor getting stuck at the edges o\nf the screen.\n\nThe reported position of the mouse is not updated while relative \nmode is enabled, even when relative mouse motion events are generated.\n\nDocumentation from https://love2d.org/wiki/love.mouse.setRelativeMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets whether relative mode is enabled for the mouse.\n\nWhen relative mode is \nenabled, the cursor is hidden and doesn't move when the mouse does, but rela\ntive mouse motion events are still generated via love.mousemoved. This lets \nthe mouse move in any direction indefinitely without the cursor getting stuc\nk at the edges of the screen.\n\nThe reported position of the mouse is not upd\nated while relative mode is enabled, even when relative mouse motion events \nare generated.\n\nDocumentation from https://love2d.org/wiki/love.mouse.setRelativeMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "mouse" "setRelativeMode"]
                 }
@@ -1829,7 +1829,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.physics.getMeter"
                     :fnl/arglist {}
-                    :fnl/docstring "Get the scale of the world.\n\nThe world scale is the number of pixels per meter. \nTry to keep your shape sizes less than 10 times this scale.\n\nThis is important b\necause the physics in Box2D is tuned to work well for objects of size 0.1m up to\n 10m. All physics coordinates are divided by this number for the physics calcula\ntions.\n\nDocumentation from https://love2d.org/wiki/love.physics.getMeter\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Get the scale of the world.\n\nThe world scale is the number of pixels per met\ner. Try to keep your shape sizes less than 10 times this scale.\n\nThis is imp\nortant because the physics in Box2D is tuned to work well for objects of siz\ne 0.1m up to 10m. All physics coordinates are divided by this number for the\n physics calculations.\n\nDocumentation from https://love2d.org/wiki/love.physics.getMeter\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "physics" "getMeter"]
                 }
@@ -1838,7 +1838,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.physics.newBody"
                     :fnl/arglist ["world" "x" "y" "type"]
-                    :fnl/docstring "Creates a new body.\n\nThere are three types of bodies. Static bodies do not move,\n have a infinite mass, and can be used for level boundaries. Dynamic bodies are \nthe main actors in the simulation, they collide with everything. Kinematic bodie\ns do not react to forces and only collide with dynamic bodies.\n\nThe mass of the \nbody gets calculated when a Fixture is attached or removed, but can be changed a\nt any time with Body:setMass or Body:resetMassData.\n\nDocumentation from https://love2d.org/wiki/love.physics.newBody\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Creates a new body.\n\nThere are three types of bodies. Static bodies do not m\nove, have a infinite mass, and can be used for level boundaries. Dynamic bod\nies are the main actors in the simulation, they collide with everything. Kin\nematic bodies do not react to forces and only collide with dynamic bodies.\n\n\nThe mass of the body gets calculated when a Fixture is attached or removed, \nbut can be changed at any time with Body:setMass or Body:resetMassData.\n\nDocumentation from https://love2d.org/wiki/love.physics.newBody\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "physics" "newBody"]
                 }
@@ -1857,7 +1857,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.physics.newDistanceJoint"
                     :fnl/arglist ["body1" "body2" "x1" "y1" "x2" "y2" "collideConnected"]
-                    :fnl/docstring "Create a distance joint between two bodies.\n\nThis joint constrains the distance \nbetween two points on two bodies to be constant. These two points are specified \nin world coordinates and the two bodies are assumed to be in place when this joi\nnt is created. The first anchor point is connected to the first body and the sec\nond to the second body, and the points define the length of the distance joint.\n\nDocumentation from https://love2d.org/wiki/love.physics.newDistanceJoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Create a distance joint between two bodies.\n\nThis joint constrains the dista\nnce between two points on two bodies to be constant. These two points are sp\necified in world coordinates and the two bodies are assumed to be in place w\nhen this joint is created. The first anchor point is connected to the first \nbody and the second to the second body, and the points define the length of \nthe distance joint.\n\nDocumentation from https://love2d.org/wiki/love.physics.newDistanceJoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "physics" "newDistanceJoint"]
                 }
@@ -1884,7 +1884,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.physics.newFrictionJoint"
                     :fnl/arglist ["body1" "body2" "x" "y" "collideConnected"]
-                    :fnl/docstring "Create a friction joint between two bodies. A FrictionJoint applies friction to \na body.\n\nDocumentation from https://love2d.org/wiki/love.physics.newFrictionJoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Create a friction joint between two bodies. A FrictionJoint applies friction\n to a body.\n\nDocumentation from https://love2d.org/wiki/love.physics.newFrictionJoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "physics" "newFrictionJoint"]
                 }
@@ -1893,7 +1893,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.physics.newGearJoint"
                     :fnl/arglist ["joint1" "joint2" "ratio" "collideConnected"]
-                    :fnl/docstring "Create a gear joint connecting two joints.\n\nThe gear joint connects two joints t\nhat must be either prismatic or revolute joints. Using this joint requires that \nthe joints it uses connect their respective bodies to the ground and have the gr\nound as the first body. When destroying the bodies and joints you must make sure\n you destroy the gear joint before the other joints.\n\nThe gear joint has a ratio\n the determines how the angular or distance values of the connected joints relat\ne to each other. The formula coordinate1 + ratio * coordinate2 always has a cons\ntant value that is set when the gear joint is created.\n\nDocumentation from https://love2d.org/wiki/love.physics.newGearJoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Create a gear joint connecting two joints.\n\nThe gear joint connects two join\nts that must be either prismatic or revolute joints. Using this joint requir\nes that the joints it uses connect their respective bodies to the ground and\n have the ground as the first body. When destroying the bodies and joints yo\nu must make sure you destroy the gear joint before the other joints.\n\nThe ge\nar joint has a ratio the determines how the angular or distance values of th\ne connected joints relate to each other. The formula coordinate1 + ratio * c\noordinate2 always has a constant value that is set when the gear joint is cr\neated.\n\nDocumentation from https://love2d.org/wiki/love.physics.newGearJoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "physics" "newGearJoint"]
                 }
@@ -1907,7 +1907,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.physics.newMouseJoint"
                     :fnl/arglist ["body" "x" "y"]
-                    :fnl/docstring "Create a joint between a body and the mouse.\n\nThis joint actually connects the b\nody to a fixed point in the world. To make it follow the mouse, the fixed point \nmust be updated every timestep (example below).\n\nThe advantage of using a MouseJ\noint instead of just changing a body position directly is that collisions and re\nactions to other joints are handled by the physics engine.\n\nDocumentation from https://love2d.org/wiki/love.physics.newMouseJoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Create a joint between a body and the mouse.\n\nThis joint actually connects t\nhe body to a fixed point in the world. To make it follow the mouse, the fixe\nd point must be updated every timestep (example below).\n\nThe advantage of us\ning a MouseJoint instead of just changing a body position directly is that c\nollisions and reactions to other joints are handled by the physics engine.\n\nDocumentation from https://love2d.org/wiki/love.physics.newMouseJoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "physics" "newMouseJoint"]
                 }
@@ -1926,7 +1926,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.physics.newPulleyJoint"
                     :fnl/arglist ["body1" "body2" "gx1" "gy1" "gx2" "gy2" "x1" "y1" "x2" "y2" "ratio" "collideConnected"]
-                    :fnl/docstring "Create a pulley joint to join two bodies to each other and the ground.\n\nThe pull\ney joint simulates a pulley with an optional block and tackle. If the ratio para\nmeter has a value different from one, then the simulated rope extends faster on \none side than the other. In a pulley joint the total length of the simulated rop\ne is the constant length1 + ratio * length2, which is set when the pulley joint \nis created.\n\nPulley joints can behave unpredictably if one side is fully extende\nd. It is recommended that the method setMaxLengths  be used to constrain the max\nimum lengths each side can attain.\n\nDocumentation from https://love2d.org/wiki/love.physics.newPulleyJoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Create a pulley joint to join two bodies to each other and the ground.\n\nThe \npulley joint simulates a pulley with an optional block and tackle. If the ra\ntio parameter has a value different from one, then the simulated rope extend\ns faster on one side than the other. In a pulley joint the total length of t\nhe simulated rope is the constant length1 + ratio * length2, which is set wh\nen the pulley joint is created.\n\nPulley joints can behave unpredictably if o\nne side is fully extended. It is recommended that the method setMaxLengths  \nbe used to constrain the maximum lengths each side can attain.\n\nDocumentation from https://love2d.org/wiki/love.physics.newPulleyJoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "physics" "newPulleyJoint"]
                 }
@@ -1945,7 +1945,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.physics.newRopeJoint"
                     :fnl/arglist ["body1" "body2" "x1" "y1" "x2" "y2" "maxLength" "collideConnected"]
-                    :fnl/docstring "Create a joint between two bodies. Its only function is enforcing a max distance\n between these bodies.\n\nDocumentation from https://love2d.org/wiki/love.physics.newRopeJoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Create a joint between two bodies. Its only function is enforcing a max dist\nance between these bodies.\n\nDocumentation from https://love2d.org/wiki/love.physics.newRopeJoint\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "physics" "newRopeJoint"]
                 }
@@ -1977,7 +1977,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.physics.setMeter"
                     :fnl/arglist ["scale"]
-                    :fnl/docstring "Sets the pixels to meter scale factor.\n\nAll coordinates in the physics module ar\ne divided by this number and converted to meters, and it creates a convenient wa\ny to draw the objects directly to the screen without the need for graphics trans\nformations.\n\nIt is recommended to create shapes no larger than 10 times the scal\ne. This is important because Box2D is tuned to work well with shape sizes from 0\n.1 to 10 meters. The default meter scale is 30.\n\nlove.physics.setMeter does not \napply retroactively to created objects. Created objects retain their meter coord\ninates but the scale factor will affect their pixel coordinates.\n\nDocumentation from https://love2d.org/wiki/love.physics.setMeter\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets the pixels to meter scale factor.\n\nAll coordinates in the physics modul\ne are divided by this number and converted to meters, and it creates a conve\nnient way to draw the objects directly to the screen without the need for gr\naphics transformations.\n\nIt is recommended to create shapes no larger than 1\n0 times the scale. This is important because Box2D is tuned to work well wit\nh shape sizes from 0.1 to 10 meters. The default meter scale is 30.\n\nlove.ph\nysics.setMeter does not apply retroactively to created objects. Created obje\ncts retain their meter coordinates but the scale factor will affect their pi\nxel coordinates.\n\nDocumentation from https://love2d.org/wiki/love.physics.setMeter\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "physics" "setMeter"]
                 }
@@ -1999,7 +1999,7 @@
               :meta {
                 :docstor/link "https://love2d.org/wiki/love.resize"
                 :fnl/arglist ["w" "h"]
-                :fnl/docstring "Called when the window is resized, for example if the user resizes the window, o\nr if love.window.setMode is called with an unsupported width or height in fullsc\nreen and the window chooses the closest appropriate size.\n\nCalls to love.window.\nsetMode will only trigger this event if the width or height of the window after \nthe call doesn't match the requested width and height. This can happen if a full\nscreen mode is requested which doesn't match any supported mode, or if the fulls\ncreen type is 'desktop' and the requested width or height don't match the deskto\np resolution.\n\nDocumentation from https://love2d.org/wiki/love.resize\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                :fnl/docstring "Called when the window is resized, for example if the user resizes the windo\nw, or if love.window.setMode is called with an unsupported width or height i\nn fullscreen and the window chooses the closest appropriate size.\n\nCalls to \nlove.window.setMode will only trigger this event if the width or height of t\nhe window after the call doesn't match the requested width and height. This \ncan happen if a fullscreen mode is requested which doesn't match any support\ned mode, or if the fullscreen type is 'desktop' and the requested width or h\neight don't match the desktop resolution.\n\nDocumentation from https://love2d.org/wiki/love.resize\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
               }
               :path ["_G" "love" "resize"]
             }
@@ -2008,7 +2008,7 @@
               :meta {
                 :docstor/link "https://love2d.org/wiki/love.run"
                 :fnl/arglist {}
-                :fnl/docstring "The main function, containing the main loop. A sensible default is used when lef\nt out.\n\nDocumentation from https://love2d.org/wiki/love.run\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                :fnl/docstring "The main function, containing the main loop. A sensible default is used when\n left out.\n\nDocumentation from https://love2d.org/wiki/love.run\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
               }
               :path ["_G" "love" "run"]
             }
@@ -2017,7 +2017,7 @@
               :meta {
                 :docstor/link "https://love2d.org/wiki/love.setDeprecationOutput"
                 :fnl/arglist ["enable"]
-                :fnl/docstring "Sets whether LÖVE displays warnings when using deprecated functionality. It is \ndisabled by default in fused mode, and enabled by default otherwise.\n\nWhen depre\ncation output is enabled, the first use of a formally deprecated LÖVE API will \nshow a message at the bottom of the screen for a short time, and print the messa\nge to the console.\n\nDocumentation from https://love2d.org/wiki/love.setDeprecationOutput\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                :fnl/docstring "Sets whether LÖVE displays warnings when using deprecated functionality. It\n is disabled by default in fused mode, and enabled by default otherwise.\n\nWh\nen deprecation output is enabled, the first use of a formally deprecated LÖ\nVE API will show a message at the bottom of the screen for a short time, and\n print the message to the console.\n\nDocumentation from https://love2d.org/wiki/love.setDeprecationOutput\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
               }
               :path ["_G" "love" "setDeprecationOutput"]
             }
@@ -2053,7 +2053,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.system.getOS"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the current operating system. In general, LÖVE abstracts away the need to \nknow the current operating system, but there are a few cases where it can be use\nful (especially in combination with os.execute.)\n\nDocumentation from https://love2d.org/wiki/love.system.getOS\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the current operating system. In general, LÖVE abstracts away the need\n to know the current operating system, but there are a few cases where it ca\nn be useful (especially in combination with os.execute.)\n\nDocumentation from https://love2d.org/wiki/love.system.getOS\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "system" "getOS"]
                 }
@@ -2098,7 +2098,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.system.vibrate"
                     :fnl/arglist ["seconds"]
-                    :fnl/docstring "Causes the device to vibrate, if possible. Currently this will only work on Andr\noid and iOS devices that have a built-in vibration motor.\n\nDocumentation from https://love2d.org/wiki/love.system.vibrate\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Causes the device to vibrate, if possible. Currently this will only work on \nAndroid and iOS devices that have a built-in vibration motor.\n\nDocumentation from https://love2d.org/wiki/love.system.vibrate\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "system" "vibrate"]
                 }
@@ -2111,7 +2111,7 @@
               :meta {
                 :docstor/link "https://love2d.org/wiki/love.textedited"
                 :fnl/arglist ["text" "start" "length"]
-                :fnl/docstring "Called when the candidate text for an IME (Input Method Editor) has changed.\n\nTh\ne candidate text is not the final text that the user will eventually choose. Use\n love.textinput for that.\n\nDocumentation from https://love2d.org/wiki/love.textedited\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                :fnl/docstring "Called when the candidate text for an IME (Input Method Editor) has changed.\n\n\nThe candidate text is not the final text that the user will eventually cho\nose. Use love.textinput for that.\n\nDocumentation from https://love2d.org/wiki/love.textedited\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
               }
               :path ["_G" "love" "textedited"]
             }
@@ -2120,7 +2120,7 @@
               :meta {
                 :docstor/link "https://love2d.org/wiki/love.textinput"
                 :fnl/arglist ["text"]
-                :fnl/docstring "Called when text has been entered by the user. For example if shift-2 is pressed\n on an American keyboard layout, the text \"@\" will be generated.\n\nDocumentation from https://love2d.org/wiki/love.textinput\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                :fnl/docstring "Called when text has been entered by the user. For example if shift-2 is pre\nssed on an American keyboard layout, the text \"@\" will be generated.\n\nDocumentation from https://love2d.org/wiki/love.textinput\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
               }
               :path ["_G" "love" "textinput"]
             }
@@ -2140,7 +2140,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.thread.newChannel"
                     :fnl/arglist {}
-                    :fnl/docstring "Create a new unnamed thread channel.\n\nOne use for them is to pass new unnamed ch\nannels to other threads via Channel:push\n\nDocumentation from https://love2d.org/wiki/love.thread.newChannel\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Create a new unnamed thread channel.\n\nOne use for them is to pass new unname\nd channels to other threads via Channel:push\n\nDocumentation from https://love2d.org/wiki/love.thread.newChannel\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "thread" "newChannel"]
                 }
@@ -2196,7 +2196,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.timer.getTime"
                     :fnl/arglist {}
-                    :fnl/docstring "Returns the value of a timer with an unspecified starting time. This function sh\nould only be used to calculate differences between points in time, as the starti\nng time of the timer is unknown.\n\nDocumentation from https://love2d.org/wiki/love.timer.getTime\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Returns the value of a timer with an unspecified starting time. This functio\nn should only be used to calculate differences between points in time, as th\ne starting time of the timer is unknown.\n\nDocumentation from https://love2d.org/wiki/love.timer.getTime\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "timer" "getTime"]
                 }
@@ -2256,7 +2256,7 @@
               :meta {
                 :docstor/link "https://love2d.org/wiki/love.touchmoved"
                 :fnl/arglist ["id" "x" "y" "dx" "dy" "pressure"]
-                :fnl/docstring "Callback function triggered when a touch press moves inside the touch screen.\n\nDocumentation from https://love2d.org/wiki/love.touchmoved\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                :fnl/docstring "Callback function triggered when a touch press moves inside the touch screen\n.\n\nDocumentation from https://love2d.org/wiki/love.touchmoved\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
               }
               :path ["_G" "love" "touchmoved"]
             }
@@ -2303,7 +2303,7 @@
               :meta {
                 :docstor/link "https://love2d.org/wiki/love.visible"
                 :fnl/arglist ["visible"]
-                :fnl/docstring "Callback function triggered when window is minimized/hidden or unminimized by th\ne user.\n\nDocumentation from https://love2d.org/wiki/love.visible\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                :fnl/docstring "Callback function triggered when window is minimized/hidden or unminimized b\ny the user.\n\nDocumentation from https://love2d.org/wiki/love.visible\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
               }
               :path ["_G" "love" "visible"]
             }
@@ -2337,7 +2337,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.getDPIScale"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the DPI scale factor associated with the window.\n\nThe pixel density inside \nthe window might be greater (or smaller) than the \"size\" of the window. For exam\nple on a retina screen in Mac OS X with the highdpi window flag enabled, the win\ndow may take up the same physical size as an 800x600 window, but the area inside\n the window uses 1600x1200 pixels. love.window.getDPIScale() would return 2.0 in\n that case.\n\nThe love.window.fromPixels and love.window.toPixels functions can a\nlso be used to convert between units.\n\nThe highdpi window flag must be enabled t\no use the full pixel density of a Retina screen on Mac OS X and iOS. The flag cu\nrrently does nothing on Windows and Linux, and on Android it is effectively alwa\nys enabled.\n\nDocumentation from https://love2d.org/wiki/love.window.getDPIScale\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the DPI scale factor associated with the window.\n\nThe pixel density ins\nide the window might be greater (or smaller) than the \"size\" of the window. \nFor example on a retina screen in Mac OS X with the highdpi window flag enab\nled, the window may take up the same physical size as an 800x600 window, but\n the area inside the window uses 1600x1200 pixels. love.window.getDPIScale()\n would return 2.0 in that case.\n\nThe love.window.fromPixels and love.window.\ntoPixels functions can also be used to convert between units.\n\nThe highdpi w\nindow flag must be enabled to use the full pixel density of a Retina screen \non Mac OS X and iOS. The flag currently does nothing on Windows and Linux, a\nnd on Android it is effectively always enabled.\n\nDocumentation from https://love2d.org/wiki/love.window.getDPIScale\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "getDPIScale"]
                 }
@@ -2391,7 +2391,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.getPixelScale"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the DPI scale factor associated with the window.\n\nThe pixel density inside \nthe window might be greater (or smaller) than the \"size\" of the window. For exam\nple on a retina screen in Mac OS X with the highdpi window flag enabled, the win\ndow may take up the same physical size as an 800x600 window, but the area inside\n the window uses 1600x1200 pixels. love.window.getPixelScale() would return 2.0 \nin that case.\n\nThe love.window.fromPixels and love.window.toPixels functions can\n also be used to convert between units.\n\nThe highdpi window flag must be enabled\n to use the full pixel density of a Retina screen on Mac OS X and iOS. The flag \ncurrently does nothing on Windows and Linux, and on Android it is effectively al\nways enabled.\n\nDocumentation from https://love2d.org/wiki/love.window.getPixelScale\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the DPI scale factor associated with the window.\n\nThe pixel density ins\nide the window might be greater (or smaller) than the \"size\" of the window. \nFor example on a retina screen in Mac OS X with the highdpi window flag enab\nled, the window may take up the same physical size as an 800x600 window, but\n the area inside the window uses 1600x1200 pixels. love.window.getPixelScale\n() would return 2.0 in that case.\n\nThe love.window.fromPixels and love.windo\nw.toPixels functions can also be used to convert between units.\n\nThe highdpi\n window flag must be enabled to use the full pixel density of a Retina scree\nn on Mac OS X and iOS. The flag currently does nothing on Windows and Linux,\n and on Android it is effectively always enabled.\n\nDocumentation from https://love2d.org/wiki/love.window.getPixelScale\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "getPixelScale"]
                 }
@@ -2400,7 +2400,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.getPosition"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets the position of the window on the screen.\n\nThe window position is in the co\nordinate space of the display it is currently in.\n\nDocumentation from https://love2d.org/wiki/love.window.getPosition\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets the position of the window on the screen.\n\nThe window position is in th\ne coordinate space of the display it is currently in.\n\nDocumentation from https://love2d.org/wiki/love.window.getPosition\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "getPosition"]
                 }
@@ -2436,7 +2436,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.isDisplaySleepEnabled"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets whether the display is allowed to sleep while the program is running.\n\nDisp\nlay sleep is disabled by default. Some types of input (e.g. joystick button pres\nses) might not prevent the display from sleeping, if display sleep is allowed.\n\nDocumentation from https://love2d.org/wiki/love.window.isDisplaySleepEnabled\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets whether the display is allowed to sleep while the program is running.\n\n\nDisplay sleep is disabled by default. Some types of input (e.g. joystick but\nton presses) might not prevent the display from sleeping, if display sleep i\ns allowed.\n\nDocumentation from https://love2d.org/wiki/love.window.isDisplaySleepEnabled\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "isDisplaySleepEnabled"]
                 }
@@ -2445,7 +2445,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.isMaximized"
                     :fnl/arglist {}
-                    :fnl/docstring "Gets whether the Window is currently maximized.\n\nThe window can be maximized if \nit is not fullscreen and is resizable, and either the user has pressed the windo\nw's Maximize button or love.window.maximize has been called.\n\nDocumentation from https://love2d.org/wiki/love.window.isMaximized\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Gets whether the Window is currently maximized.\n\nThe window can be maximized\n if it is not fullscreen and is resizable, and either the user has pressed t\nhe window's Maximize button or love.window.maximize has been called.\n\nDocumentation from https://love2d.org/wiki/love.window.isMaximized\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "isMaximized"]
                 }
@@ -2472,7 +2472,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.isVisible"
                     :fnl/arglist {}
-                    :fnl/docstring "Checks if the game window is visible.\n\nThe window is considered visible if it's \nnot minimized and the program isn't hidden.\n\nDocumentation from https://love2d.org/wiki/love.window.isVisible\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Checks if the game window is visible.\n\nThe window is considered visible if i\nt's not minimized and the program isn't hidden.\n\nDocumentation from https://love2d.org/wiki/love.window.isVisible\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "isVisible"]
                 }
@@ -2481,7 +2481,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.maximize"
                     :fnl/arglist {}
-                    :fnl/docstring "Makes the window as large as possible.\n\nThis function has no effect if the windo\nw isn't resizable, since it essentially programmatically presses the window's \"m\naximize\" button.\n\nDocumentation from https://love2d.org/wiki/love.window.maximize\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Makes the window as large as possible.\n\nThis function has no effect if the w\nindow isn't resizable, since it essentially programmatically presses the win\ndow's \"maximize\" button.\n\nDocumentation from https://love2d.org/wiki/love.window.maximize\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "maximize"]
                 }
@@ -2499,7 +2499,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.requestAttention"
                     :fnl/arglist ["continuous"]
-                    :fnl/docstring "Causes the window to request the attention of the user if it is not in the foreg\nround.\n\nIn Windows the taskbar icon will flash, and in OS X the dock icon will b\nounce.\n\nDocumentation from https://love2d.org/wiki/love.window.requestAttention\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Causes the window to request the attention of the user if it is not in the f\noreground.\n\nIn Windows the taskbar icon will flash, and in OS X the dock ico\nn will bounce.\n\nDocumentation from https://love2d.org/wiki/love.window.requestAttention\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "requestAttention"]
                 }
@@ -2508,7 +2508,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.restore"
                     :fnl/arglist {}
-                    :fnl/docstring "Restores the size and position of the window if it was minimized or maximized.\n\nDocumentation from https://love2d.org/wiki/love.window.restore\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Restores the size and position of the window if it was minimized or maximize\nd.\n\nDocumentation from https://love2d.org/wiki/love.window.restore\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "restore"]
                 }
@@ -2517,7 +2517,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.setDisplaySleepEnabled"
                     :fnl/arglist ["enable"]
-                    :fnl/docstring "Sets whether the display is allowed to sleep while the program is running.\n\nDisp\nlay sleep is disabled by default. Some types of input (e.g. joystick button pres\nses) might not prevent the display from sleeping, if display sleep is allowed.\n\nDocumentation from https://love2d.org/wiki/love.window.setDisplaySleepEnabled\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets whether the display is allowed to sleep while the program is running.\n\n\nDisplay sleep is disabled by default. Some types of input (e.g. joystick but\nton presses) might not prevent the display from sleeping, if display sleep i\ns allowed.\n\nDocumentation from https://love2d.org/wiki/love.window.setDisplaySleepEnabled\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "setDisplaySleepEnabled"]
                 }
@@ -2531,7 +2531,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.setIcon"
                     :fnl/arglist ["imagedata"]
-                    :fnl/docstring "Sets the window icon until the game is quit. Not all operating systems support v\nery large icon images.\n\nDocumentation from https://love2d.org/wiki/love.window.setIcon\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets the window icon until the game is quit. Not all operating systems suppo\nrt very large icon images.\n\nDocumentation from https://love2d.org/wiki/love.window.setIcon\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "setIcon"]
                 }
@@ -2540,7 +2540,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.setMode"
                     :fnl/arglist ["width" "height" "flags"]
-                    :fnl/docstring "Sets the display mode and properties of the window.\n\nIf width or height is 0, se\ntMode will use the width and height of the desktop.\n\nChanging the display mode m\nay have side effects: for example, canvases will be cleared and values sent to s\nhaders with Shader:send will be erased. Make sure to save the contents of canvas\nes beforehand or re-draw to them afterward if you need to.\n\nDocumentation from https://love2d.org/wiki/love.window.setMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets the display mode and properties of the window.\n\nIf width or height is 0\n, setMode will use the width and height of the desktop.\n\nChanging the displa\ny mode may have side effects: for example, canvases will be cleared and valu\nes sent to shaders with Shader:send will be erased. Make sure to save the co\nntents of canvases beforehand or re-draw to them afterward if you need to.\n\nDocumentation from https://love2d.org/wiki/love.window.setMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "setMode"]
                 }
@@ -2549,7 +2549,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.setPosition"
                     :fnl/arglist ["x" "y" "display"]
-                    :fnl/docstring "Sets the position of the window on the screen.\n\nThe window position is in the co\nordinate space of the specified display.\n\nDocumentation from https://love2d.org/wiki/love.window.setPosition\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets the position of the window on the screen.\n\nThe window position is in th\ne coordinate space of the specified display.\n\nDocumentation from https://love2d.org/wiki/love.window.setPosition\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "setPosition"]
                 }
@@ -2577,7 +2577,7 @@
                   :meta {
                     :docstor/link "https://love2d.org/wiki/love.window.updateMode"
                     :fnl/arglist ["width" "height" "settings"]
-                    :fnl/docstring "Sets the display mode and properties of the window, without modifying unspecifie\nd properties.\n\nIf width or height is 0, updateMode will use the width and height\n of the desktop.\n\nChanging the display mode may have side effects: for example, \ncanvases will be cleared. Make sure to save the contents of canvases beforehand \nor re-draw to them afterward if you need to.\n\nDocumentation from https://love2d.org/wiki/love.window.updateMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
+                    :fnl/docstring "Sets the display mode and properties of the window, without modifying unspec\nified properties.\n\nIf width or height is 0, updateMode will use the width an\nd height of the desktop.\n\nChanging the display mode may have side effects: f\nor example, canvases will be cleared. Make sure to save the contents of canv\nases beforehand or re-draw to them afterward if you need to.\n\nDocumentation from https://love2d.org/wiki/love.window.updateMode\nNOTE: These docs were generated; arglist may be inaccurate in cases of optional/varargs."
                   }
                   :path ["_G" "love" "window" "updateMode"]
                 }

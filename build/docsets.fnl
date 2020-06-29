@@ -1,6 +1,5 @@
 #!/usr/bin/env fennel
 (import-macros {: over-values : get-data-dir} :fnldocstor.macros)
-(local {: concat : line-break} (require :fnldocstor.utils))
 (local (fennel view request json)
        (over-values require :fennel :fennelview :http.request :dkjson))
 
@@ -23,12 +22,19 @@ If src is not a table, src itself will be inserted into the new table."
       _      (tset new (+ 1 (length new)) tgt)))
   new)
 
-(λ break-at-length [str ?line-length]
-  "Formats str so no lines exceed ?line-length (default: 80)."
+(λ line-break [str ?line-length]
+  "Formats str so no lines exceed ?line-length (default: 76)."
+  (when (not ?line-length) (set-forcibly! ?line-length 76))
   (local lines [])
   (for [i 0 (str:len) ?line-length]
     (table.insert lines (str:sub (+ i 1) (+ i ?line-length))))
   (table.concat lines "\n"))
+
+(λ write-file [path data]
+  (let [file (io.open path :w)
+        data (match (data:sub -1) "\n" data (.. data "\n"))
+        finish (fn [ok ...] (file:close) (if ok ... (error ... 0)))]
+    (finish (pcall file.write file data))))
 
 (fn fetch [url]
   (let [(headers stream) (assert (: (request.new_from_uri url) :go))
@@ -47,9 +53,7 @@ If src is not a table, src itself will be inserted into the new table."
         txt    (fetch url)
         docset (json.decode txt)
         path   (paths.raw key)]
-    (print (.. "saving raw '" key "' docset to " path))
-    (with-open [file (io.open path :w)]
-      (file:write (view docset)))
+    (write-file path (view docset))
     [key docset]))
 
 (fn mk-doc [path] {:path (or path []) :fields {} :meta {}})
@@ -64,19 +68,18 @@ If src is not a table, src itself will be inserted into the new table."
                            (ipairs []))]]
       (tset parent.fields key docset)
       (when d.description
-        (if (not d.link) (tset d :fnl/docstring (line-break d.description 80))
-            (tset docset.meta :fnl/docstring
-                  (.. (line-break d.description 80)
-                      (if d.link (.. "\n\nDocumentation from " d.link) "")
-                      (.. "\nNOTE: These docs were generated; arglist may be inaccurate in cases of"
-                          " optional/varargs."))))
+        (tset docset.meta :fnl/docstring
+              (.. (line-break d.description)
+                  (if d.link (.. "\n\nDocumentation from " d.link) "")
+                  (.. "\nNOTE: These docs were generated; arglist may be inaccurate in cases of"
+                      " optional/varargs.")))
         (when args
           (each [opt arg (*unpack args)]
             (if (not arg) (lua :break)
               (-?> arg (. :name)) (set-forcibly! arg arg.name))
             (if (and (= :string (type opt)) (= (opt:sub 1 1) "["))
-                (table.insert fnl/arglist (.. :? (arg:gsub "%s" "")))
-                (table.insert fnl/arglist (tostring (arg:gsub "%s" ""))))))
+              (table.insert fnl/arglist (.. :? (arg:gsub "%s" "")))
+              (table.insert fnl/arglist (tostring (arg:gsub "%s" ""))))))
         (tset docset.meta :fnl/arglist fnl/arglist)
         (when d.link (tset docset.meta :docstor/link d.link))))
     :table (do (tset parent.fields key docset)
@@ -86,19 +89,18 @@ If src is not a table, src itself will be inserted into the new table."
 (fn build-docset [key]
   (let [data     (fennel.dofile (.. :build/ key :.fnl))
         out      (paths.processed key)]
-    (print (.. "patching raw docset for " key "from build/" key :.fnl))
     (local docset (mk-doc []))
     (build-doc-field docset :_G data.global)
-    (print (.. "saving processed docset for " key " to " out))
-    (with-open [file (io.open out :w)]
-      (file:write (view docset)))))
+    (write-file out (view docset))))
 
 (match arg
+  [:keys]      (each [k (pairs docsets)] (print k))
   [:fetch key] (fetch-docset key)
   [:fetch nil] (each [k v (pairs docsets)]
-                 (print k v)
-                 (fetch-docset k v))
+                 (print (string.format "** fetching %s from %s"k v))
+                 (fetch-docset k))
   [:build key] (build-docset key)
   [:build nil] (each [k v (pairs docsets)]
-                 (build-docset k v))
+                 (print (string.format "** processing build/%s.fnl -> data/%s.fnl" k k))
+                 (build-docset k))
   _ (print (.. "unknown args in: " (table.concat [(*unpack arg)] ", "))))
