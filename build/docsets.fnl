@@ -104,4 +104,4 @@ If src is not a table, src itself will be inserted into the new table."
   [:build nil] (each [k v (pairs docsets)]
                  (print (string.format "** processing build/%s.fnl -> data/%s.fnl" k k))
                  (build-docset k))
-  _ (print (.. "unknown args in: " (table.concat [(*unpack arg)] ", "))))
+  _ (print (.. "unknown args in: " (table.concat arg ", "))))
