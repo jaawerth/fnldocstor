@@ -1,10 +1,15 @@
 # fnldocstor
 
-A [fennel-lang](https://fennel-lang.org) utility library loading function
-metadata (docstrings and arglists) from pre-formatted docsets for various
-Lua runtimes.
+A [fennel-lang](https://fennel-lang.org) utility library that sets function
+metadata from pre-generated docsets for various Lua runtimes. Check docs
+for functions in Lua's standard library right from the fennel REPL!
+
+![Sample screenshot](screenshot.png)
 
 Comes preloaded with docsets for **Lua 5.1**, **Lua 5.2**, **Lua 5.3**, **LuaJIT**, and **love2d**.
+
+**Note:** This library is still somewhat unstable. It works, but the
+docstring formatting and configuration options are still a work in progress.
 
 ## Install
 

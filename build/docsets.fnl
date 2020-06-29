@@ -70,9 +70,10 @@ If src is not a table, src itself will be inserted into the new table."
       (when d.description
         (tset docset.meta :fnl/docstring
               (.. (line-break d.description)
-                  (if d.link (.. "\n\nDocumentation from " d.link) "")
-                  (.. "\nNOTE: These docs were generated; arglist may be inaccurate in cases of"
-                      " optional/varargs.")))
+                  (if d.link (.. "\n----\nSource: " d.link) "")
+                  (.. "\nNOTE: These docs were scraped; for any "
+                      "inaccuracies, please file an issue\n      "
+                      "at https://github.com/jaawerth/fnldocstor/issues")))
         (when args
           (each [opt arg (*unpack args)]
             (if (not arg) (lua :break)
