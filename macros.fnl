@@ -1,6 +1,6 @@
 ;; directory used to auto-load docsets
 (var *data-dir* (or (match os {: getenv} (getenv :FNLDOCSTOR_DATADIR))
-                    "fnldocstor.data"))
+                    "fnldocstor/data"))
 
 (λ over-values [f ...]
   (local out `(values))
@@ -25,6 +25,6 @@ Returns: (values prev-path new-path)"
     (set *data-dir* parent-mod-path)
     (values prev-path parent-mod-path)))
 
-(fn get-data-dir [] *data-dir*)
+(fn get-data-dir [] (string.gsub *data-dir* "%/*$" ""))
 
 {: over-values : get-data-dir : set-data-dir! : append}

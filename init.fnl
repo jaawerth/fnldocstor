@@ -4,19 +4,31 @@
 
 ;; utils
 
+(fn dirname []
+  (match (pcall #(let [src (-?> (debug.getinfo 3) (. :source) (: :gsub "^%@" ""))
+                       file (io.open src :r)]
+                   (when file (file:close) src)))
+    (ok path) (string.gsub path "%/[^/]*$" "")
+    (false err) (values nil err)))
+
 ; This is a macro so we can generate static requires for --require-as-include
-(macro gen-requires [version]
+(macro gen-load [version require?]
   (import-macros {: get-data-dir} :fnldocstor.macros)
-  (local data (string.gsub (get-data-dir) "/+$" ""))
-  (local req #`(let [docset# (require ,$)]
-                  (tset package.loaded ,$ nil)
-                  docset#))
+  (local data-dir (get-data-dir))
+  (local req (if (os.getenv :FNLDOCSTOR_USE_REQUIRE) 
+               `#(require (.. ,(-> data-dir (: :gsub "%/+$" "") (: :gsub "%/" ".")) $))
+               `#(fennel.dofile (.. (match (dirname) d# (.. d# :/) "")
+                                    ,(: data-dir :gsub "^fnldocstor/" "") :/ $ :.fnl))))
+  (local load-doc #`(let [docset# (,req ,$)]
+                      (when (. package.loaded ,$) (tset package.loaded ,$ nil))
+                      docset#))
   `(let [version# ,version]
      (match version#
-       :lua_5_1 ,(req (.. data :.lua_5_1))
-       :lua_5_2 ,(req (.. data :.lua_5_2))
-       :lua_5_3 ,(req (.. data :.lua_5_3))
-       :luajit  ,(req (.. data :.luajit))
+       :lua_5_1 ,(load-doc :lua_5_1)
+       :lua_5_2 ,(load-doc :lua_5_2)
+       :lua_5_3 ,(load-doc :lua_5_3)
+       :luajit  ,(load-doc :luajit)
+       :love    ,(load-doc :love)
        (->> (format "Unable to load docsets for _VERSION %s\n" version#)
             (pcall io.stderr.write io.stderr)))))
 
@@ -64,7 +76,7 @@ Accepts an options table with the following keys for overriding defaults:
   (let [tgt-env (or ?opts.env _G {})
         version (or ?opts.version (if tgt-env.jit :luajit
                                      (gsub (lower _VERSION) "[%s%.]" :_)))
-        docset  (gen-requires version)]
+        docset  (gen-load version)]
     {:docset version :loaded (load-docset tgt-env docset.fields._G)}))
 
 (setmetatable {: install : load-docset}
