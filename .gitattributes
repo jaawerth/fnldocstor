@@ -1,7 +1,4 @@
-# Force Github to highlight Fennel src as Clojure
-*.fnl linguist-language=clojure
 build/*.fnl linguist-vendored
 build/docsets.fnl !linguist-vendored
 
-data/*.fnl linguist-generated
 data/*.lua linguist-generated
